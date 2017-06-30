@@ -19,9 +19,9 @@ class GameViewController: UIViewController {
         // GameOfLifeSimulation setup start //
         /////////////////////////////////////
         
-        let filePath = Bundle.main.path(forResource: "map01", ofType: "txt")!
-        let sim = GameOfLifeSimulation(file: filePath)!
-        let palette: [Character?] = ["👾", "😸", nil, nil, nil, nil, nil, nil]
+        //let filePath = Bundle.main.path(forResource: "map01", ofType: "txt")!
+        //let sim = GameOfLifeSimulation(file: filePath)!
+        //let palette: [Character?] = ["👾", "😸", nil, nil, nil, nil, nil, nil]
         
         /////////////////////////////////////
         // GameOfLifeSimulation setup end //
@@ -42,8 +42,8 @@ class GameViewController: UIViewController {
         // Custom Simulation setup start //
         //////////////////////////////////
         
-//        let sim = YourSimulationClass()
-//        let palette: [Character?] = [nil, nil, nil, nil, nil, nil, nil, nil]
+        let sim = EmojiSimulation()
+        let palette: [Character?] = ["😎", "🤓", nil, nil, nil, nil, nil, nil]
         
         //////////////////////////////////
         // Custom Simulation setup end //

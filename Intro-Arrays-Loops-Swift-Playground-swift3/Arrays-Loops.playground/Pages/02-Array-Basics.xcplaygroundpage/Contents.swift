@@ -116,7 +116,7 @@ palette.count
     }
 
  */
-for index in 0..<5 {
+for i in 0..<5 {
     palette.append("😈")
 }
 

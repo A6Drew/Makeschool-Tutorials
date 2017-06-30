@@ -18,15 +18,8 @@ public class GameOfLifeSimulation: Simulation {
         
         for x in 0...grid.count-1 {
             for y in 0...grid[0].count-1 {
-                //                if grid[x][y] == liveChar && countNeighbors(grid: grid, column: x, row: y) == 2{
-                //                    //newGrid[x][y] = liveChar
-                //                }
-                //
-                //
-                //                else if grid[x][y] == liveChar && countNeighbors(grid: grid, column: x, row: y) == 3 {
-                //                    //newGrid[x][y] = liveChar
-                //                }
-                
+
+    
                 if grid[x][y] == liveChar && countNeighbors(grid: grid, column: x, row: y) < 2 {
                     newGrid[x][y] = nil
                 }
