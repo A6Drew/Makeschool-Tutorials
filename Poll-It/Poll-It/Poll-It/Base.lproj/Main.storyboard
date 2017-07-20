@@ -12,7 +12,7 @@
         <!--View Controller-->
         <scene sceneID="WPN-i5-cs8">
             <objects>
-                <viewController storyboardIdentifier="Main" id="oCn-kc-5ZO" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Home" id="oCn-kc-5ZO" customClass="ViewController" customModule="Poll_It" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyb-Yx-0Ih"/>
                         <viewControllerLayoutGuide type="bottom" id="sIU-jw-AZh"/>
