@@ -19,6 +19,8 @@
 		3AA5B3081F212C3500185E7D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA5B3041F212C3500185E7D /* ProfileViewController.swift */; };
 		3AA5B3091F212C3500185E7D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA5B3051F212C3500185E7D /* SignUpViewController.swift */; };
 		3AA5B30A1F212C3500185E7D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA5B3061F212C3500185E7D /* ViewController.swift */; };
+		3AA5B3171F2153CC00185E7D /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA5B3161F2153CC00185E7D /* MainTabBarController.swift */; };
+		3ACAABEC1F21600300CE7D37 /* AddPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACAABEB1F21600300CE7D37 /* AddPostViewController.swift */; };
 		3DB1C781DE02907B5DA50282 /* Pods_Poll_It_IOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 979370D229998B81D0C58E7C /* Pods_Poll_It_IOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +39,8 @@
 		3AA5B3041F212C3500185E7D /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = "Poll-It-IOS/View Controllers/ProfileViewController.swift"; sourceTree = "<group>"; };
 		3AA5B3051F212C3500185E7D /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpViewController.swift; path = "Poll-It-IOS/View Controllers/SignUpViewController.swift"; sourceTree = "<group>"; };
 		3AA5B3061F212C3500185E7D /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = "Poll-It-IOS/View Controllers/ViewController.swift"; sourceTree = "<group>"; };
+		3AA5B3161F2153CC00185E7D /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainTabBarController.swift; path = "Poll-It-IOS/View Controllers/MainTabBarController.swift"; sourceTree = "<group>"; };
+		3ACAABEB1F21600300CE7D37 /* AddPostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddPostViewController.swift; path = "Poll-It-IOS/View Controllers/AddPostViewController.swift"; sourceTree = "<group>"; };
 		48AF6C35ABFE51C2B7E28107 /* Pods-Poll-It-IOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Poll-It-IOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Poll-It-IOS/Pods-Poll-It-IOS.debug.xcconfig"; sourceTree = "<group>"; };
 		979370D229998B81D0C58E7C /* Pods_Poll_It_IOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Poll_It_IOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -91,6 +95,8 @@
 				3AA5B3041F212C3500185E7D /* ProfileViewController.swift */,
 				3AA5B3051F212C3500185E7D /* SignUpViewController.swift */,
 				3AA5B3061F212C3500185E7D /* ViewController.swift */,
+				3AA5B3161F2153CC00185E7D /* MainTabBarController.swift */,
+				3ACAABEB1F21600300CE7D37 /* AddPostViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -262,9 +268,11 @@
 			files = (
 				3AA5B30A1F212C3500185E7D /* ViewController.swift in Sources */,
 				3AA5B3081F212C3500185E7D /* ProfileViewController.swift in Sources */,
+				3AA5B3171F2153CC00185E7D /* MainTabBarController.swift in Sources */,
 				3AA5B3071F212C3500185E7D /* LoginViewController.swift in Sources */,
 				3AA5B3091F212C3500185E7D /* SignUpViewController.swift in Sources */,
 				3AA5B2E91F212AB600185E7D /* AppDelegate.swift in Sources */,
+				3ACAABEC1F21600300CE7D37 /* AddPostViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
