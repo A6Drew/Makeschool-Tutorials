@@ -7,40 +7,62 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3AA5B2E91F212AB600185E7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA5B2DF1F212AB600185E7D /* AppDelegate.swift */; };
+		3A302FAD1F2277A5008CC89B /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A302FAC1F2277A5008CC89B /* MainTabBarController.swift */; };
+		3A302FB31F227856008CC89B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A302FB21F227856008CC89B /* Constants.swift */; };
+		3A302FB51F227A5A008CC89B /* MGPhotoHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A302FB41F227A5A008CC89B /* MGPhotoHelper.swift */; };
+		3A302FB81F227B3D008CC89B /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A302FB71F227B3D008CC89B /* StorageService.swift */; };
+		3A302FBA1F227B5C008CC89B /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A302FB91F227B5C008CC89B /* PostService.swift */; };
+		3A302FBC1F227BA6008CC89B /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A302FBB1F227BA6008CC89B /* Post.swift */; };
+		3A302FC21F22815F008CC89B /* CreatePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A302FC11F22815F008CC89B /* CreatePostViewController.swift */; };
+		3A302FC51F228381008CC89B /* UIImage+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A302FC41F228381008CC89B /* UIImage+Size.swift */; };
+		3A302FC71F2284DA008CC89B /* StorageReference+Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A302FC61F2284DA008CC89B /* StorageReference+Post.swift */; };
 		3AA5B2EA1F212AB600185E7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AA5B2E01F212AB600185E7D /* Assets.xcassets */; };
 		3AA5B2EB1F212AB600185E7D /* Base.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 3AA5B2E11F212AB600185E7D /* Base.lproj */; };
-		3AA5B2FB1F212C1F00185E7D /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AA5B2F91F212C1F00185E7D /* Login.storyboard */; };
-		3AA5B2FC1F212C1F00185E7D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AA5B2FA1F212C1F00185E7D /* Main.storyboard */; };
 		3AA5B3001F212C2B00185E7D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3AA5B2FD1F212C2B00185E7D /* GoogleService-Info.plist */; };
 		3AA5B3011F212C2B00185E7D /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3AA5B2FE1F212C2B00185E7D /* Info.plist */; };
 		3AA5B3021F212C2B00185E7D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AA5B2FF1F212C2B00185E7D /* LaunchScreen.storyboard */; };
-		3AA5B3071F212C3500185E7D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA5B3031F212C3500185E7D /* LoginViewController.swift */; };
 		3AA5B3081F212C3500185E7D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA5B3041F212C3500185E7D /* ProfileViewController.swift */; };
-		3AA5B3091F212C3500185E7D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA5B3051F212C3500185E7D /* SignUpViewController.swift */; };
 		3AA5B30A1F212C3500185E7D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA5B3061F212C3500185E7D /* ViewController.swift */; };
-		3AA5B3171F2153CC00185E7D /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA5B3161F2153CC00185E7D /* MainTabBarController.swift */; };
-		3ACAABEC1F21600300CE7D37 /* AddPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACAABEB1F21600300CE7D37 /* AddPostViewController.swift */; };
+		3ADC8A211F22A11000A8A550 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADC8A201F22A11000A8A550 /* UserService.swift */; };
+		3ADC8A231F22AA3A00A8A550 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADC8A221F22AA3A00A8A550 /* AppDelegate.swift */; };
+		3ADC8A251F22AA4F00A8A550 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADC8A241F22AA4F00A8A550 /* ResetPasswordViewController.swift */; };
+		3ADC8A271F22AA5600A8A550 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADC8A261F22AA5600A8A550 /* LoginViewController.swift */; };
+		3ADC8A291F22AA6200A8A550 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADC8A281F22AA6200A8A550 /* HomeViewController.swift */; };
+		3ADC8A2B1F22AA6900A8A550 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADC8A2A1F22AA6900A8A550 /* SignUpViewController.swift */; };
+		3ADC8A2E1F22AAD600A8A550 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3ADC8A2C1F22AAD600A8A550 /* Main.storyboard */; };
+		3ADC8A321F22AB0100A8A550 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3ADC8A311F22AB0100A8A550 /* Home.storyboard */; };
+		3ADC8A521F22B05D00A8A550 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADC8A511F22B05D00A8A550 /* User.swift */; };
 		3DB1C781DE02907B5DA50282 /* Pods_Poll_It_IOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 979370D229998B81D0C58E7C /* Pods_Poll_It_IOS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		246F684BF2F74CCCD3A8B283 /* Pods-Poll-It-IOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Poll-It-IOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Poll-It-IOS/Pods-Poll-It-IOS.release.xcconfig"; sourceTree = "<group>"; };
+		3A302FAC1F2277A5008CC89B /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainTabBarController.swift; path = "Poll-It-IOS/View Controllers/MainTabBarController.swift"; sourceTree = "<group>"; };
+		3A302FB21F227856008CC89B /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = Constants/Constants.swift; sourceTree = "<group>"; };
+		3A302FB41F227A5A008CC89B /* MGPhotoHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MGPhotoHelper.swift; path = Helpers/MGPhotoHelper.swift; sourceTree = "<group>"; };
+		3A302FB71F227B3D008CC89B /* StorageService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StorageService.swift; path = Services/StorageService.swift; sourceTree = "<group>"; };
+		3A302FB91F227B5C008CC89B /* PostService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostService.swift; path = Services/PostService.swift; sourceTree = "<group>"; };
+		3A302FBB1F227BA6008CC89B /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Post.swift; path = Models/Post.swift; sourceTree = "<group>"; };
+		3A302FC11F22815F008CC89B /* CreatePostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreatePostViewController.swift; path = "Poll-It-IOS/View Controllers/CreatePostViewController.swift"; sourceTree = "<group>"; };
+		3A302FC41F228381008CC89B /* UIImage+Size.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImage+Size.swift"; path = "Extensions/UIImage+Size.swift"; sourceTree = "<group>"; };
+		3A302FC61F2284DA008CC89B /* StorageReference+Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "StorageReference+Post.swift"; path = "Extensions/StorageReference+Post.swift"; sourceTree = "<group>"; };
 		3AA5B2CA1F2129C000185E7D /* Poll-It-IOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Poll-It-IOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3AA5B2DF1F212AB600185E7D /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = "Poll-It-IOS/AppDelegate.swift"; sourceTree = "<group>"; };
 		3AA5B2E01F212AB600185E7D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "Poll-It-IOS/Assets.xcassets"; sourceTree = "<group>"; };
 		3AA5B2E11F212AB600185E7D /* Base.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Base.lproj; path = "Poll-It-IOS/Base.lproj"; sourceTree = "<group>"; };
-		3AA5B2F91F212C1F00185E7D /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Login.storyboard; path = "Poll-It-IOS/Storyboards/Login.storyboard"; sourceTree = "<group>"; };
-		3AA5B2FA1F212C1F00185E7D /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = "Poll-It-IOS/Storyboards/Main.storyboard"; sourceTree = "<group>"; };
 		3AA5B2FD1F212C2B00185E7D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "Poll-It-IOS/Supporting/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3AA5B2FE1F212C2B00185E7D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Poll-It-IOS/Supporting/Info.plist"; sourceTree = "<group>"; };
 		3AA5B2FF1F212C2B00185E7D /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = "Poll-It-IOS/Supporting/LaunchScreen.storyboard"; sourceTree = "<group>"; };
-		3AA5B3031F212C3500185E7D /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = "Poll-It-IOS/View Controllers/LoginViewController.swift"; sourceTree = "<group>"; };
 		3AA5B3041F212C3500185E7D /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = "Poll-It-IOS/View Controllers/ProfileViewController.swift"; sourceTree = "<group>"; };
-		3AA5B3051F212C3500185E7D /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpViewController.swift; path = "Poll-It-IOS/View Controllers/SignUpViewController.swift"; sourceTree = "<group>"; };
 		3AA5B3061F212C3500185E7D /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = "Poll-It-IOS/View Controllers/ViewController.swift"; sourceTree = "<group>"; };
-		3AA5B3161F2153CC00185E7D /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainTabBarController.swift; path = "Poll-It-IOS/View Controllers/MainTabBarController.swift"; sourceTree = "<group>"; };
-		3ACAABEB1F21600300CE7D37 /* AddPostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddPostViewController.swift; path = "Poll-It-IOS/View Controllers/AddPostViewController.swift"; sourceTree = "<group>"; };
+		3ADC8A201F22A11000A8A550 /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserService.swift; path = Services/UserService.swift; sourceTree = "<group>"; };
+		3ADC8A221F22AA3A00A8A550 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = "../../../../Downloads/FirebaseLoginDemo-master/FirebaseTutorial/AppDelegate.swift"; sourceTree = "<group>"; };
+		3ADC8A241F22AA4F00A8A550 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResetPasswordViewController.swift; path = "../../../Downloads/FirebaseLoginDemo-master/FirebaseTutorial/ResetPasswordViewController.swift"; sourceTree = "<group>"; };
+		3ADC8A261F22AA5600A8A550 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = "../../../Downloads/FirebaseLoginDemo-master/FirebaseTutorial/LoginViewController.swift"; sourceTree = "<group>"; };
+		3ADC8A281F22AA6200A8A550 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = "../../../Downloads/FirebaseLoginDemo-master/FirebaseTutorial/HomeViewController.swift"; sourceTree = "<group>"; };
+		3ADC8A2A1F22AA6900A8A550 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpViewController.swift; path = "../../../Downloads/FirebaseLoginDemo-master/FirebaseTutorial/SignUpViewController.swift"; sourceTree = "<group>"; };
+		3ADC8A2D1F22AAD600A8A550 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "../../../Downloads/FirebaseLoginDemo-master/FirebaseTutorial/Base.lproj/Main.storyboard"; sourceTree = "<group>"; };
+		3ADC8A311F22AB0100A8A550 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Home.storyboard; path = "Poll-It-IOS/Storyboards/Home.storyboard"; sourceTree = "<group>"; };
+		3ADC8A511F22B05D00A8A550 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Models/User.swift; sourceTree = "<group>"; };
 		48AF6C35ABFE51C2B7E28107 /* Pods-Poll-It-IOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Poll-It-IOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Poll-It-IOS/Pods-Poll-It-IOS.debug.xcconfig"; sourceTree = "<group>"; };
 		979370D229998B81D0C58E7C /* Pods_Poll_It_IOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Poll_It_IOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -57,14 +79,58 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A302FAE1F2277D5008CC89B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3ADC8A511F22B05D00A8A550 /* User.swift */,
+				3A302FB41F227A5A008CC89B /* MGPhotoHelper.swift */,
+				3A302FBB1F227BA6008CC89B /* Post.swift */,
+			);
+			name = Models;
+			path = "Poll-It-IOS";
+			sourceTree = "<group>";
+		};
+		3A302FB11F22783E008CC89B /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				3A302FB21F227856008CC89B /* Constants.swift */,
+			);
+			name = Constants;
+			path = "Poll-It-IOS";
+			sourceTree = "<group>";
+		};
+		3A302FB61F227B13008CC89B /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				3A302FB71F227B3D008CC89B /* StorageService.swift */,
+				3A302FB91F227B5C008CC89B /* PostService.swift */,
+				3ADC8A201F22A11000A8A550 /* UserService.swift */,
+			);
+			name = Services;
+			path = "Poll-It-IOS";
+			sourceTree = "<group>";
+		};
+		3A302FC31F22835C008CC89B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3A302FC41F228381008CC89B /* UIImage+Size.swift */,
+				3A302FC61F2284DA008CC89B /* StorageReference+Post.swift */,
+			);
+			name = Extensions;
+			path = "Poll-It-IOS";
+			sourceTree = "<group>";
+		};
 		3AA5B2C11F2129C000185E7D = {
 			isa = PBXGroup;
 			children = (
 				3AA5B2CC1F2129C000185E7D /* Poll-It-IOS */,
-				3AA5B2DF1F212AB600185E7D /* AppDelegate.swift */,
 				3AA5B30B1F212D7700185E7D /* View Controllers */,
 				3AA5B30D1F212D8B00185E7D /* Storyboards */,
+				3A302FB11F22783E008CC89B /* Constants */,
+				3A302FAE1F2277D5008CC89B /* Models */,
 				3AA5B30C1F212D7F00185E7D /* Supporting */,
+				3A302FB61F227B13008CC89B /* Services */,
+				3A302FC31F22835C008CC89B /* Extensions */,
 				3AA5B2E01F212AB600185E7D /* Assets.xcassets */,
 				3AA5B2E11F212AB600185E7D /* Base.lproj */,
 				3AA5B2CB1F2129C000185E7D /* Products */,
@@ -84,6 +150,7 @@
 		3AA5B2CC1F2129C000185E7D /* Poll-It-IOS */ = {
 			isa = PBXGroup;
 			children = (
+				3ADC8A221F22AA3A00A8A550 /* AppDelegate.swift */,
 			);
 			path = "Poll-It-IOS";
 			sourceTree = "<group>";
@@ -91,12 +158,14 @@
 		3AA5B30B1F212D7700185E7D /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				3AA5B3031F212C3500185E7D /* LoginViewController.swift */,
+				3ADC8A241F22AA4F00A8A550 /* ResetPasswordViewController.swift */,
+				3ADC8A261F22AA5600A8A550 /* LoginViewController.swift */,
+				3ADC8A2A1F22AA6900A8A550 /* SignUpViewController.swift */,
+				3A302FAC1F2277A5008CC89B /* MainTabBarController.swift */,
+				3ADC8A281F22AA6200A8A550 /* HomeViewController.swift */,
 				3AA5B3041F212C3500185E7D /* ProfileViewController.swift */,
-				3AA5B3051F212C3500185E7D /* SignUpViewController.swift */,
 				3AA5B3061F212C3500185E7D /* ViewController.swift */,
-				3AA5B3161F2153CC00185E7D /* MainTabBarController.swift */,
-				3ACAABEB1F21600300CE7D37 /* AddPostViewController.swift */,
+				3A302FC11F22815F008CC89B /* CreatePostViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -114,8 +183,8 @@
 		3AA5B30D1F212D8B00185E7D /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				3AA5B2F91F212C1F00185E7D /* Login.storyboard */,
-				3AA5B2FA1F212C1F00185E7D /* Main.storyboard */,
+				3ADC8A311F22AB0100A8A550 /* Home.storyboard */,
+				3ADC8A2C1F22AAD600A8A550 /* Main.storyboard */,
 			);
 			name = Storyboards;
 			sourceTree = "<group>";
@@ -201,13 +270,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3ADC8A321F22AB0100A8A550 /* Home.storyboard in Resources */,
 				3AA5B2EB1F212AB600185E7D /* Base.lproj in Resources */,
 				3AA5B2EA1F212AB600185E7D /* Assets.xcassets in Resources */,
 				3AA5B3011F212C2B00185E7D /* Info.plist in Resources */,
+				3ADC8A2E1F22AAD600A8A550 /* Main.storyboard in Resources */,
 				3AA5B3001F212C2B00185E7D /* GoogleService-Info.plist in Resources */,
 				3AA5B3021F212C2B00185E7D /* LaunchScreen.storyboard in Resources */,
-				3AA5B2FB1F212C1F00185E7D /* Login.storyboard in Resources */,
-				3AA5B2FC1F212C1F00185E7D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,16 +336,38 @@
 			buildActionMask = 2147483647;
 			files = (
 				3AA5B30A1F212C3500185E7D /* ViewController.swift in Sources */,
+				3A302FC21F22815F008CC89B /* CreatePostViewController.swift in Sources */,
+				3A302FBC1F227BA6008CC89B /* Post.swift in Sources */,
+				3ADC8A291F22AA6200A8A550 /* HomeViewController.swift in Sources */,
 				3AA5B3081F212C3500185E7D /* ProfileViewController.swift in Sources */,
-				3AA5B3171F2153CC00185E7D /* MainTabBarController.swift in Sources */,
-				3AA5B3071F212C3500185E7D /* LoginViewController.swift in Sources */,
-				3AA5B3091F212C3500185E7D /* SignUpViewController.swift in Sources */,
-				3AA5B2E91F212AB600185E7D /* AppDelegate.swift in Sources */,
-				3ACAABEC1F21600300CE7D37 /* AddPostViewController.swift in Sources */,
+				3ADC8A231F22AA3A00A8A550 /* AppDelegate.swift in Sources */,
+				3ADC8A2B1F22AA6900A8A550 /* SignUpViewController.swift in Sources */,
+				3A302FAD1F2277A5008CC89B /* MainTabBarController.swift in Sources */,
+				3A302FB51F227A5A008CC89B /* MGPhotoHelper.swift in Sources */,
+				3A302FBA1F227B5C008CC89B /* PostService.swift in Sources */,
+				3A302FC51F228381008CC89B /* UIImage+Size.swift in Sources */,
+				3A302FC71F2284DA008CC89B /* StorageReference+Post.swift in Sources */,
+				3ADC8A211F22A11000A8A550 /* UserService.swift in Sources */,
+				3ADC8A271F22AA5600A8A550 /* LoginViewController.swift in Sources */,
+				3ADC8A521F22B05D00A8A550 /* User.swift in Sources */,
+				3ADC8A251F22AA4F00A8A550 /* ResetPasswordViewController.swift in Sources */,
+				3A302FB81F227B3D008CC89B /* StorageService.swift in Sources */,
+				3A302FB31F227856008CC89B /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3ADC8A2C1F22AAD600A8A550 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3ADC8A2D1F22AAD600A8A550 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		3AA5B2DA1F2129C100185E7D /* Debug */ = {

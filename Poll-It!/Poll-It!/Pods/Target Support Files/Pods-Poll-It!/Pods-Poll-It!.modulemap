@@ -1,0 +1,6 @@
+framework module Pods_Poll_It_ {
+  umbrella header "Pods-Poll-It!-umbrella.h"
+
+  export *
+  module * { export * }
+}

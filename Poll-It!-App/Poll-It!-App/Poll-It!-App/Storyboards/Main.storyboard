@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Ghv-HB-amq">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Item 2-->
+        <scene sceneID="97I-F3-Fcc">
+            <objects>
+                <viewController id="GOk-K5-5lq" customClass="AddPollViewController" customModule="Poll_It__App" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="iov-3g-H18"/>
+                        <viewControllerLayoutGuide type="bottom" id="9V3-MJ-HBj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mNM-nJ-uba">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GrJ-am-nDH">
+                                <rect key="frame" x="318" y="568" width="37" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Done"/>
+                                <connections>
+                                    <action selector="doneButtonTapped:" destination="GOk-K5-5lq" eventType="touchUpInside" id="KRb-Zw-iZs"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" text="1st Poll Option" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="J8O-43-NdR">
+                                <rect key="frame" x="41" y="45" width="318" height="211"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" text="2nd Poll Option" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="prk-96-WWh">
+                                <rect key="frame" x="41" y="337" width="307" height="196"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="wuQ-ek-REn"/>
+                    <connections>
+                        <outlet property="pollTextView1" destination="J8O-43-NdR" id="E9g-ro-O5F"/>
+                        <outlet property="pollTextView2" destination="prk-96-WWh" id="AYa-kx-GDJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="deg-DU-dsC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="341.60000000000002" y="-809.14542728635683"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="OAT-bb-xSo">
+            <objects>
+                <viewController id="WM6-LI-YfA" customClass="ProfileViewController" customModule="Poll_It__App" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5sZ-A6-xNp"/>
+                        <viewControllerLayoutGuide type="bottom" id="qL4-Vf-RIu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1fk-kV-ffl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="daQ-Zj-B9c">
+                                <rect key="frame" x="238" y="466" width="60" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Sign Out"/>
+                                <connections>
+                                    <action selector="signOutButtonTapped:" destination="WM6-LI-YfA" eventType="touchUpInside" id="w7c-M4-aIP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="CUW-pn-vV5"/>
+                    <connections>
+                        <outlet property="signOutButton" destination="daQ-Zj-B9c" id="6MG-I1-M6Q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mhA-Dk-bNa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1935" y="-563"/>
+        </scene>
+        <!--Item 1-->
+        <scene sceneID="qlG-ry-Ljf">
+            <objects>
+                <viewController id="pL0-bB-6Ir" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="49m-E0-S7N"/>
+                        <viewControllerLayoutGuide type="bottom" id="8ft-Yg-14Y"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LrY-03-snM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="ERp-Yl-osa"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="coW-8c-Y1k" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-100" y="-98"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="lcQ-IU-WY7">
+            <objects>
+                <tabBarController storyboardIdentifier="home" id="Ghv-HB-amq" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="2vM-oN-0i3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="pL0-bB-6Ir" kind="relationship" relationship="viewControllers" id="xTy-UT-Vzz"/>
+                        <segue destination="GOk-K5-5lq" kind="relationship" relationship="viewControllers" id="fXe-GA-0nx"/>
+                        <segue destination="WM6-LI-YfA" kind="relationship" relationship="viewControllers" id="crE-wF-QRo"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MGZ-Tq-kQf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-746" y="-562"/>
+        </scene>
+    </scenes>
+</document>

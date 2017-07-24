@@ -14,12 +14,15 @@ import FirebaseDatabase
 class AddPostViewController: UIViewController {
 
 
+    
     @IBOutlet weak var firstImageView: UIImageView!
 //    @IBOutlet weak var myActivityIndicator: UIActivityIndicatorView!
     
     @IBAction func uploadButtonTapped(_ sender: UIButton) {
         
-        myImageUploadRequest()
+        //myImageUploadRequest()
+        
+        
 
     }
     @IBAction func selectButtonTapped(_ sender: UIButton) {
@@ -31,6 +34,7 @@ class AddPostViewController: UIViewController {
         self.present(myPickerController, animated: true, completion: nil)
         
     }
+    
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject])
         
@@ -100,7 +104,7 @@ class AddPostViewController: UIViewController {
 //                
 //                print(json)
 //                
-//                DispatchQueue.main.asyncasync(DispatchQueue.main,execute: {
+//                DispatchQueue.main.async(DispatchQueue.main,execute: {
 //                    self.myActivityIndicator.stopAnimating()
 //                    self.firstImageView.image = nil;
 //                });
@@ -111,7 +115,7 @@ class AddPostViewController: UIViewController {
 //            }
 //            
 //        }
-        
+//        
 //        task.resume()
     }
     

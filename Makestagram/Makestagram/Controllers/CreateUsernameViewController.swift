@@ -59,6 +59,7 @@ class CreateUsernameViewController: UIViewController {
             ref.observeSingleEvent(of: .value, with: { (snapshot) in
                 let user = User(snapshot: snapshot)
             })
+        }
     }
     
 //    override func didReceiveMemoryWarning() {
@@ -77,7 +78,7 @@ class CreateUsernameViewController: UIViewController {
     }
     */
 
-        }
+        
     }
 
 }
