@@ -1,41 +1,21 @@
 //
-//  ProfileViewController.swift
+//  MainTabBarViewController.swift
 //  Poll-It!-App
 //
-//  Created by Andrew Ng on 2017-07-26.
+//  Created by Andrew Ng on 2017-07-28.
 //  Copyright © 2017 Andrew Ng. All rights reserved.
 //
 
 import UIKit
-import Firebase
-import FirebaseAuth 
 
-class ProfileViewController: UIViewController {
+class MainTabBarViewController: UITabBarController {
 
-
-    @IBOutlet weak var signOutButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
 
-    
-
- 
-    
-    @IBAction func signOutButtonTapped(_ sender: UIButton) {
-    
-        try! Firebase.Auth.auth().signOut()
-        
-        let vc = UIStoryboard(name: "Login", bundle: nil).instantiateViewController(withIdentifier: "first") as? FirstViewController
-        self.show(vc!, sender: self)
-        
-        let userDefault = UserDefaults.standard
-        userDefault.set(false, forKey: "loggedIn")
-        userDefault.synchronize()
- }   
-    
 //    override func didReceiveMemoryWarning() {
 //        super.didReceiveMemoryWarning()
 //        // Dispose of any resources that can be recreated.
@@ -53,3 +33,6 @@ class ProfileViewController: UIViewController {
     */
 
 }
+
+
+

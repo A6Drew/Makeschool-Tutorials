@@ -10,7 +10,7 @@ import UIKit
 import FirebaseAuth
 import FirebaseDatabase
 
-class CreateUsernameViewController: UIViewController {
+class CreateUsernameViewController: UIViewController, UITextFieldDelegate {
     
    
     @IBOutlet weak var usernameTextField: UITextField!
@@ -18,7 +18,14 @@ class CreateUsernameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(AddPollViewController.dismissKeyboard))
+        
+        view.addGestureRecognizer(tap)
         // Do any additional setup after loading the view.
+        
+        usernameTextField.delegate = self
     }
     
     
@@ -61,9 +68,23 @@ class CreateUsernameViewController: UIViewController {
                 })
             }
         }
+        
+        dismissKeyboard()
     
     }
-            
+    
+    
+    func dismissKeyboard() {
+        view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(textField: UITextField!) -> Bool // called when 'return' key pressed. return NO to ignore.
+    {
+        textField.resignFirstResponder()
+        return true;
+    }
+}
+
             //    override func didReceiveMemoryWarning() {
             //        super.didReceiveMemoryWarning()
             //        // Dispose of any resources that can be recreated.
@@ -80,7 +101,7 @@ class CreateUsernameViewController: UIViewController {
              }
              */
             
-        }
+
 
     
 

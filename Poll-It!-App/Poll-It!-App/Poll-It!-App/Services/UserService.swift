@@ -41,4 +41,50 @@ struct UserService {
             })
         }
     }
+    
+    static func polls(for user: User, completion: @escaping ([Poll]) -> Void) {
+        let ref = Database.database().reference().child("users").child(user.uid).child("polls")
+        
+        ref.observeSingleEvent(of: .value, with: { (snapshot) in
+            guard let snapshot = snapshot.children.allObjects as? [DataSnapshot] else {
+                return completion([])
+            }
+            
+            let polls = snapshot.reversed().flatMap(Poll.init)
+            completion(polls)
+        }
+   )}
+//
+//    static func polls(for user: User, completion: @escaping ([Poll]) -> Void) {
+//        let ref = Database.database().reference().child("polls").child(user.uid)
+//        ref.observeSingleEvent(of: .value, with: { (snapshot) in
+//            guard let snapshot = snapshot.children.allObjects as? [DataSnapshot] else {
+//                return completion([])
+//            }
+//            
+//            let dispatchGroup = DispatchGroup()
+//            
+//            let polls: [Poll] =
+//                snapshot
+//                    .reversed()
+//                    .flatMap {
+//                        guard let poll = Poll(snapshot: $0)
+//                            else { return nil }
+//                        
+//                        dispatchGroup.enter()
+//                        
+//                        VoteService.isPollVoted(poll) { (isVoted) in
+//                            poll.isVoted = isVoted
+//                            
+//                            dispatchGroup.leave()
+//                        }
+//                        
+//                        return poll
+//            }
+//            
+//            dispatchGroup.notify(queue: .main, execute: {
+//                completion(polls)
+//            })
+//        })
+//    }
 }

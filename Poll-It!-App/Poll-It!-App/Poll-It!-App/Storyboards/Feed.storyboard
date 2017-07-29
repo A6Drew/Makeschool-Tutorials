@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="6fQ-sf-kMV">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="OAT-bb-xSo">
+            <objects>
+                <viewController id="WM6-LI-YfA" customClass="HomeViewController" customModule="Poll_It__App" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5sZ-A6-xNp"/>
+                        <viewControllerLayoutGuide type="bottom" id="qL4-Vf-RIu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1fk-kV-ffl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="377" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Rs1-a2-Wbj">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="YourPollsCell" rowHeight="377" id="rJL-MB-IBH" customClass="YourPollsCell" customModule="Poll_It__App" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="377"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rJL-MB-IBH" id="e0I-sh-k4y" customClass="YourPollsCell" customModule="Poll_It__App" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="377"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LBh-5F-DGd">
+                                                    <rect key="frame" x="83" y="33" width="209" height="129"/>
+                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="129" id="L49-df-Wvm"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PollText1Perecent" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d5k-P5-d1l">
+                                                    <rect key="frame" x="119" y="33" width="136" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aQu-IR-Xik">
+                                                    <rect key="frame" x="83" y="33" width="209" height="129"/>
+                                                    <state key="normal" title="PollText1Button">
+                                                        <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                </button>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mJX-17-e5I">
+                                                    <rect key="frame" x="83" y="226" width="209" height="129"/>
+                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="129" id="DoH-1V-Uhb"/>
+                                                        <constraint firstAttribute="width" constant="209" id="OoD-G7-Kxx"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PollText2Percent" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9MF-vd-V5z">
+                                                    <rect key="frame" x="123" y="226" width="129" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u5T-cS-0GB">
+                                                    <rect key="frame" x="83" y="226" width="209" height="129"/>
+                                                    <state key="normal" title="PollText2Button">
+                                                        <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="LBh-5F-DGd" firstAttribute="leading" secondItem="e0I-sh-k4y" secondAttribute="leadingMargin" constant="75" id="7u3-jY-Ysf"/>
+                                                <constraint firstItem="u5T-cS-0GB" firstAttribute="leading" secondItem="mJX-17-e5I" secondAttribute="leading" id="83F-Hi-4LF"/>
+                                                <constraint firstItem="mJX-17-e5I" firstAttribute="top" secondItem="LBh-5F-DGd" secondAttribute="bottom" constant="64" id="CJe-LE-Zjf"/>
+                                                <constraint firstItem="u5T-cS-0GB" firstAttribute="top" secondItem="mJX-17-e5I" secondAttribute="top" id="DNT-zz-Zmt"/>
+                                                <constraint firstItem="LBh-5F-DGd" firstAttribute="leading" secondItem="mJX-17-e5I" secondAttribute="leading" id="NFA-Nx-tA4"/>
+                                                <constraint firstItem="u5T-cS-0GB" firstAttribute="top" secondItem="aQu-IR-Xik" secondAttribute="bottom" constant="64" id="VFC-UN-OTh"/>
+                                                <constraint firstItem="u5T-cS-0GB" firstAttribute="bottom" secondItem="mJX-17-e5I" secondAttribute="bottom" id="W39-7P-tRU"/>
+                                                <constraint firstItem="LBh-5F-DGd" firstAttribute="trailing" secondItem="mJX-17-e5I" secondAttribute="trailing" id="aG6-Yp-sHE"/>
+                                                <constraint firstItem="u5T-cS-0GB" firstAttribute="centerX" secondItem="9MF-vd-V5z" secondAttribute="centerX" id="cwK-lj-Y45"/>
+                                                <constraint firstItem="d5k-P5-d1l" firstAttribute="top" secondItem="aQu-IR-Xik" secondAttribute="top" id="dPl-o5-TUm"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="LBh-5F-DGd" secondAttribute="trailing" constant="75" id="dXr-wb-AGB"/>
+                                                <constraint firstItem="u5T-cS-0GB" firstAttribute="top" secondItem="9MF-vd-V5z" secondAttribute="top" id="pQ6-Fb-lOT"/>
+                                                <constraint firstItem="u5T-cS-0GB" firstAttribute="trailing" secondItem="mJX-17-e5I" secondAttribute="trailing" id="qdk-Hl-36p"/>
+                                                <constraint firstItem="LBh-5F-DGd" firstAttribute="top" secondItem="e0I-sh-k4y" secondAttribute="topMargin" constant="25" id="r9o-XR-RO1"/>
+                                                <constraint firstItem="d5k-P5-d1l" firstAttribute="centerX" secondItem="aQu-IR-Xik" secondAttribute="centerX" id="rxa-2M-Fes"/>
+                                                <constraint firstItem="u5T-cS-0GB" firstAttribute="leading" secondItem="aQu-IR-Xik" secondAttribute="leading" id="ugq-OM-x64"/>
+                                                <constraint firstItem="u5T-cS-0GB" firstAttribute="trailing" secondItem="aQu-IR-Xik" secondAttribute="trailing" id="vT7-yT-YLj"/>
+                                                <constraint firstItem="d5k-P5-d1l" firstAttribute="top" secondItem="LBh-5F-DGd" secondAttribute="top" id="zNd-CO-cLw"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <outlet property="pollText1" destination="LBh-5F-DGd" id="Gz8-6K-meB"/>
+                                            <outlet property="pollText2" destination="mJX-17-e5I" id="hi8-64-k5f"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="WM6-LI-YfA" id="7bN-7G-6Zm"/>
+                                    <outlet property="delegate" destination="WM6-LI-YfA" id="3CO-Gb-U3h"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Rs1-a2-Wbj" secondAttribute="bottom" id="355-SI-Uuf"/>
+                            <constraint firstAttribute="trailing" secondItem="Rs1-a2-Wbj" secondAttribute="trailing" id="QWR-ts-df0"/>
+                            <constraint firstItem="Rs1-a2-Wbj" firstAttribute="top" secondItem="1fk-kV-ffl" secondAttribute="top" id="hUW-Zd-mtZ"/>
+                            <constraint firstItem="Rs1-a2-Wbj" firstAttribute="leading" secondItem="1fk-kV-ffl" secondAttribute="leading" id="keH-oQ-g8V"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Ky1-0J-dvV"/>
+                    <connections>
+                        <outlet property="tableView" destination="Rs1-a2-Wbj" id="yUn-yu-Dpf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mhA-Dk-bNa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2872.5" y="-564.5"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="yYw-a5-CMC">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6fQ-sf-kMV" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="CUW-pn-vV5"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="EKG-CT-yOz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="MiP-pP-zJt">
+                        <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="WM6-LI-YfA" kind="relationship" relationship="rootViewController" id="hJj-fY-3sU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y2y-k7-lHu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1933.5999999999999" y="-563.56821589205401"/>
+        </scene>
+    </scenes>
+</document>

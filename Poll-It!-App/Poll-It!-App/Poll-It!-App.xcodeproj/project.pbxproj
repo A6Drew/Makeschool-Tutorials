@@ -15,8 +15,11 @@
 		3A3F305D1F265FF5009CE4E3 /* Poll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3F305C1F265FF5009CE4E3 /* Poll.swift */; };
 		3A3F30691F2668B9009CE4E3 /* AddPollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3F30681F2668B9009CE4E3 /* AddPollViewController.swift */; };
 		3A3F306B1F266925009CE4E3 /* PollService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3F306A1F266925009CE4E3 /* PollService.swift */; };
-		3A3F306D1F269F5B009CE4E3 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3F306C1F269F5B009CE4E3 /* ProfileViewController.swift */; };
-		3A3F306F1F26A25E009CE4E3 /* firstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3F306E1F26A25E009CE4E3 /* firstViewController.swift */; };
+		3A3F306D1F269F5B009CE4E3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3F306C1F269F5B009CE4E3 /* HomeViewController.swift */; };
+		3A3F306F1F26A25E009CE4E3 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3F306E1F26A25E009CE4E3 /* FirstViewController.swift */; };
+		3A3FFE9B1F290A8100A3C2C9 /* VoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3FFE9A1F290A8100A3C2C9 /* VoteService.swift */; };
+		3A3FFE9D1F290F7D00A3C2C9 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3FFE9C1F290F7D00A3C2C9 /* ProfileViewController.swift */; };
+		3A4DF0031F27C9870077D80E /* YourPollsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4DF0021F27C9870077D80E /* YourPollsCell.swift */; };
 		3ACA753F1F25013D0073D84B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACA753E1F25013D0073D84B /* AppDelegate.swift */; };
 		3ACA75461F25013D0073D84B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3ACA75451F25013D0073D84B /* Assets.xcassets */; };
 		3AE2950E1F2509BD00F61815 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE2950D1F2509BD00F61815 /* User.swift */; };
@@ -25,6 +28,7 @@
 		3AE295161F2513D700F61815 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3AE295151F2513D700F61815 /* GoogleService-Info.plist */; };
 		3AE2951A1F25212800F61815 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE295191F25212800F61815 /* Constants.swift */; };
 		3AE2951C1F2522C400F61815 /* Storyboard+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE2951B1F2522C400F61815 /* Storyboard+Utility.swift */; };
+		3AEAFCAB1F2BA8320038AABC /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEAFCAA1F2BA8320038AABC /* MainTabBarViewController.swift */; };
 		B0D9037E26ABF4402FB9853D /* Pods_Poll_It__App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB4C9FBA8F541DD0DCA23D94 /* Pods_Poll_It__App.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,8 +42,11 @@
 		3A3F305C1F265FF5009CE4E3 /* Poll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Poll.swift; sourceTree = "<group>"; };
 		3A3F30681F2668B9009CE4E3 /* AddPollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddPollViewController.swift; path = "Poll-It!-App/View Controllers/AddPollViewController.swift"; sourceTree = "<group>"; };
 		3A3F306A1F266925009CE4E3 /* PollService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PollService.swift; path = Services/PollService.swift; sourceTree = "<group>"; };
-		3A3F306C1F269F5B009CE4E3 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = "Poll-It!-App/View Controllers/ProfileViewController.swift"; sourceTree = "<group>"; };
-		3A3F306E1F26A25E009CE4E3 /* firstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = firstViewController.swift; path = "Poll-It!-App/View Controllers/firstViewController.swift"; sourceTree = "<group>"; };
+		3A3F306C1F269F5B009CE4E3 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = "Poll-It!-App/View Controllers/HomeViewController.swift"; sourceTree = "<group>"; };
+		3A3F306E1F26A25E009CE4E3 /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FirstViewController.swift; path = "Poll-It!-App/View Controllers/FirstViewController.swift"; sourceTree = "<group>"; };
+		3A3FFE9A1F290A8100A3C2C9 /* VoteService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VoteService.swift; path = Services/VoteService.swift; sourceTree = "<group>"; };
+		3A3FFE9C1F290F7D00A3C2C9 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = "Poll-It!-App/View Controllers/ProfileViewController.swift"; sourceTree = "<group>"; };
+		3A4DF0021F27C9870077D80E /* YourPollsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = YourPollsCell.swift; path = Views/YourPollsCell.swift; sourceTree = "<group>"; };
 		3ACA753B1F25013D0073D84B /* Poll-It!-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Poll-It!-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ACA753E1F25013D0073D84B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3ACA75451F25013D0073D84B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "Poll-It!-App/Assets.xcassets"; sourceTree = "<group>"; };
@@ -49,6 +56,7 @@
 		3AE295151F2513D700F61815 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "Poll-It!-App/Supporting/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3AE295191F25212800F61815 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = "Poll-It!-App/Supporting/Constants.swift"; sourceTree = "<group>"; };
 		3AE2951B1F2522C400F61815 /* Storyboard+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Storyboard+Utility.swift"; path = "Extensions/Storyboard+Utility.swift"; sourceTree = "<group>"; };
+		3AEAFCAA1F2BA8320038AABC /* MainTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainTabBarViewController.swift; path = "Poll-It!-App/View Controllers/MainTabBarViewController.swift"; sourceTree = "<group>"; };
 		AF4C75948415FF435420C04A /* Pods-Poll-It!-App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Poll-It!-App.release.xcconfig"; path = "Pods/Target Support Files/Pods-Poll-It!-App/Pods-Poll-It!-App.release.xcconfig"; sourceTree = "<group>"; };
 		BB4C9FBA8F541DD0DCA23D94 /* Pods_Poll_It__App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Poll_It__App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -101,11 +109,21 @@
 				3A344FFE1F25041800E271D7 /* LoginViewController.swift */,
 				3AE295101F250A9C00F61815 /* CreateUsernameViewController.swift */,
 				3A3F30681F2668B9009CE4E3 /* AddPollViewController.swift */,
-				3A3F306C1F269F5B009CE4E3 /* ProfileViewController.swift */,
-				3A3F306E1F26A25E009CE4E3 /* firstViewController.swift */,
+				3A3F306C1F269F5B009CE4E3 /* HomeViewController.swift */,
+				3A3F306E1F26A25E009CE4E3 /* FirstViewController.swift */,
+				3A3FFE9C1F290F7D00A3C2C9 /* ProfileViewController.swift */,
+				3AEAFCAA1F2BA8320038AABC /* MainTabBarViewController.swift */,
 			);
 			name = "View Controllers";
 			path = ..;
+			sourceTree = "<group>";
+		};
+		3A4DF0041F27C98C0077D80E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3A4DF0021F27C9870077D80E /* YourPollsCell.swift */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 		3ACA75321F25013D0073D84B = {
@@ -137,6 +155,7 @@
 				3A344FF31F25039F00E271D7 /* Storyboards */,
 				3A344FF81F2503C300E271D7 /* Supporting */,
 				3AE2951D1F2522CB00F61815 /* Extensions */,
+				3A4DF0041F27C98C0077D80E /* Views */,
 			);
 			path = "Poll-It!-App";
 			sourceTree = "<group>";
@@ -155,6 +174,7 @@
 			children = (
 				3AE295121F25123100F61815 /* UserService.swift */,
 				3A3F306A1F266925009CE4E3 /* PollService.swift */,
+				3A3FFE9A1F290A8100A3C2C9 /* VoteService.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -308,12 +328,16 @@
 				3AE295131F25123100F61815 /* UserService.swift in Sources */,
 				3AE2951C1F2522C400F61815 /* Storyboard+Utility.swift in Sources */,
 				3A3F305D1F265FF5009CE4E3 /* Poll.swift in Sources */,
-				3A3F306D1F269F5B009CE4E3 /* ProfileViewController.swift in Sources */,
+				3A3F306D1F269F5B009CE4E3 /* HomeViewController.swift in Sources */,
 				3A3F306B1F266925009CE4E3 /* PollService.swift in Sources */,
 				3AE2951A1F25212800F61815 /* Constants.swift in Sources */,
+				3AEAFCAB1F2BA8320038AABC /* MainTabBarViewController.swift in Sources */,
 				3AE295111F250A9C00F61815 /* CreateUsernameViewController.swift in Sources */,
 				3ACA753F1F25013D0073D84B /* AppDelegate.swift in Sources */,
-				3A3F306F1F26A25E009CE4E3 /* firstViewController.swift in Sources */,
+				3A3FFE9B1F290A8100A3C2C9 /* VoteService.swift in Sources */,
+				3A3FFE9D1F290F7D00A3C2C9 /* ProfileViewController.swift in Sources */,
+				3A4DF0031F27C9870077D80E /* YourPollsCell.swift in Sources */,
+				3A3F306F1F26A25E009CE4E3 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
