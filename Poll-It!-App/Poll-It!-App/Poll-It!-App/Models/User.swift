@@ -31,6 +31,8 @@ class User: NSObject {
     let uid: String
     let username: String
     var isFollowed = false
+    var isVoted = false
+    var isVoted2 = false
     
     // MARK: - Init
     
@@ -58,6 +60,7 @@ class User: NSObject {
         // 3
         guard let currentUser = _current else {
             fatalError("Error: current user doesn't exist")
+            
         }
         
         // 4

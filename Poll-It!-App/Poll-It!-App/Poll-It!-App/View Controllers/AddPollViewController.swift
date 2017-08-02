@@ -75,10 +75,22 @@ class AddPollViewController: UIViewController, UITextViewDelegate {
         }
     
         let userAttrs = [ "pollText": pollText, "pollText2": pollText2]
+        let pollAttrs = [ "pollText": pollText, "pollText2": pollText2, "username": User.current.username, "voteCount": 0, "voteCount2": 0] as [String : Any]
+
+        
         
         
         let ref = Database.database().reference().child("users").child(User.current.uid).child("polls").childByAutoId()
+        let pollKey = ref.key
+        
         ref.setValue(userAttrs) { (error, ref) in
+            if let error = error {
+                assertionFailure(error.localizedDescription)
+            }
+        }
+        
+        let newRef = Database.database().reference().child("polls").child(pollKey)
+        newRef.setValue(pollAttrs) { (error, ref) in
             if let error = error {
                 assertionFailure(error.localizedDescription)
             }

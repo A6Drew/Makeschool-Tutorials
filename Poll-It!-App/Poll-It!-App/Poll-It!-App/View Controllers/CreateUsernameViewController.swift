@@ -20,13 +20,16 @@ class CreateUsernameViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         
         
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(AddPollViewController.dismissKeyboard))
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(CreateUsernameViewController.dismissKeyboard))
         
         view.addGestureRecognizer(tap)
         // Do any additional setup after loading the view.
         
         usernameTextField.delegate = self
     }
+    
+    
+    
     
     
     
@@ -59,6 +62,7 @@ class CreateUsernameViewController: UIViewController, UITextFieldDelegate {
             ref.setValue(userAttrs) { (error, ref) in
                 if let error = error {
                     assertionFailure(error.localizedDescription)
+                    
                     return
                 }
                 

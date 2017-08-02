@@ -11,6 +11,22 @@ import FirebaseDatabase
 
 struct VoteService {
     
+    
+    
+    static func voting(for user: User, poll: Poll) {
+        
+        let ref = Database.database().reference().child("polls").child(poll.key!)
+        let voteAttrs = ["voteCount": poll.voteCount, "voteCount2": poll.voteCount2]
+        ref.updateChildValues(voteAttrs)
+        
+        let voteAttrs2 = ["isVoted": poll.isVoted[user], "isVoted2": poll.isVoted2[user]]
+        ref.child(user.uid).updateChildValues(voteAttrs2)
+    
+    }
+    
+    
+}
+    
 //    static func create(for poll: Poll, success: @escaping (Bool) -> Void) {
 //        
 //        let votesRef = Database.database().reference().child("polls").childByAutoId().child(User.current.uid)
@@ -91,4 +107,4 @@ struct VoteService {
 //        }
 //    }
 
-}
+

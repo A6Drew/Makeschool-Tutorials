@@ -17,21 +17,23 @@ class HomeViewController: UIViewController {
      var polls = [Poll]()
 
     
-    @IBOutlet weak var tableView: UITableView!
+   
 
+    @IBOutlet weak var tableView: UITableView!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tabBarController?.delegate = self 
         
-        UserService.polls(for: User.current) { (polls) in
+        
+        PollService.allPolls(for: User.current) { (polls) in
+            
             self.polls = polls
             self.tableView.reloadData()
+            
         }
         
-        
-
         
         configureTableView()
         
@@ -41,12 +43,14 @@ class HomeViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         self.tabBarController?.delegate = self
         
-        UserService.polls(for: User.current) { (polls) in
-            self.polls = polls
-            self.tableView.reloadData()
-        }
+        
+        
+    
+        
 
     }
+    
+    
     
     func configureTableView() {
         // remove separators for empty cells
@@ -56,65 +60,11 @@ class HomeViewController: UIViewController {
     }
 
     
-    
-    
-//    func didTapVoteButton(_ polltext1Button: UIButton, on cell: YourPollsCell) {
-//        // 1
-//        guard let indexPath = tableView.indexPath(for: cell)
-//            else { return }
-//        
-//        // 2
-//        polltext1Button.isUserInteractionEnabled = false
-//        // 3
-//        let post = polls[indexPath.section]
-//        
-//        // 4
-//        VoteService.setIsVoted(!poll.isPollVoted, for: poll) { (success) in
-//            // 5
-//            defer {
-//                polltext1Button.isUserInteractionEnabled = true
-//            }
-//            
-//            // 6
-//            guard success else { return }
-//            
-//            // 7
-//            poll.voteCount += !poll.isVoted ? 1 : -1
-//            poll.isVoted = !poll.isVoted
-//            
-//            // 8
-//            guard let cell = self.tableView.cellForRow(at: indexPath) as? YourPollsCell
-//                else { return }
-//            
-//            // 9
-//            DispatchQueue.main.async {
-//                self.configureCell(cell, with: poll)
-//            }
-//        }
-//    }
-    
-
-    
-    
-//    override func didReceiveMemoryWarning() {
-//        super.didReceiveMemoryWarning()
-//        // Dispose of any resources that can be recreated.
-//    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func pollText1ButtonTapped(_ sender: UIButton) {
     }
-    */
+    
 
 }
-
-
 
 extension HomeViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -129,13 +79,38 @@ extension HomeViewController: UITableViewDataSource {
         
         cell.pollText1View.text = poll.content
         cell.pollText2View.text = poll.content2
-        cell.pollText1Percent.text = String(format: "%.2f", poll.votePercent)
-        cell.pollText2Percent.text = String(format: "%.2f", poll.votePercent2)
+        
+        poll.votePercent =
+            (Double(poll.voteCount) / Double((poll.voteCount + poll.voteCount2)) * Double(100)).roundTo(places: 2)
+        poll.votePercent2 = (Double(poll.voteCount2) / Double((poll.voteCount + poll.voteCount2)) * Double(100)).roundTo(places: 2)
+        
+        if poll.votePercent.isNaN {
+            poll.votePercent = 0
+        }
+        
+        if poll.votePercent2.isNaN {
+            poll.votePercent2 = 0
+        }
+        
+        if poll.votePercent.isInfinite {
+            poll.votePercent = 0
+        }
+        
+        if poll.votePercent2.isInfinite {
+            poll.votePercent2 = 0
+        }
+        
+        if poll.votePercent < 0 {
+            poll.votePercent = 0
+        }
+        
+        if poll.votePercent2 < 0 {
+            poll.votePercent2 = 0
+        }
+        
+        cell.pollText1Percent.text = String(format: "%.0f", poll.votePercent)
+        cell.pollText2Percent.text = String(format: "%.0f", poll.votePercent2)
         cell.pollUsername.text = String(poll.poster!)
-        
-        
-//        cell.pollText1Percent.text = "\(poll.voteCount! / (poll.voteCount! + poll.voteCount2!))%"
-//        cell.pollText2Percent.text =  "\(poll.voteCount2! / (poll.voteCount! + poll.voteCount2!))%"
         
         return cell
     }
@@ -151,46 +126,49 @@ extension HomeViewController: YourPollsCellDelegate {
 
         let poll = polls[indexPath.row]
         
-        if pollNum == 1 || pollNum == 2 {
-            pollTextButton.isEnabled = false
-        }
-       
-
-        
         if pollNum == 1 {
-            poll.voteCount += 1
-//            pollTextButton.isEnabled = false
             
-//            if poll.voteCount == 2{
-//                poll.voteCount -= 2
-//                poll.votePercent = 0.00
-//            }
-//            
-//            else if poll.voteCount > 2 {
-//                poll.voteCount += 0
-//            }
+            if poll.isVoted[User.current] == true {
+                poll.voteCount -= 1
+                poll.isVoted[User.current] = false
+                
+            }
+            
+            else {
+                poll.voteCount += 1
+                poll.isVoted[User.current] = true
+                
+                if poll.isVoted2[User.current] == true {
+                    poll.voteCount2 -= 1
+                    poll.isVoted2[User.current] = false
+                }
+            }
+
             
         }
         
         else if pollNum == 2 {
-            poll.voteCount2 += 1
-//            pollTextButton.isEnabled = false
+
+         
             
-//            if poll.voteCount2 == 2{
-//                poll.voteCount2 -= 2
-//                poll.votePercent2 = 0.00
-//            }
-//            
-//            else if poll.voteCount2 > 2 {
-//                poll.voteCount2 += 0
-//            }
+            if poll.isVoted2[User.current] == true {
+                poll.voteCount2 -= 1
+                poll.isVoted2[User.current] = false
+            }
+            
+            else {
+                poll.voteCount2 += 1
+                poll.isVoted2[User.current] = true
+                
+                if poll.isVoted[User.current] == true {
+                    poll.voteCount -= 1
+                    poll.isVoted[User.current] = false
+                }
+            }
             
         }
         
-        poll.votePercent =
-            (Double(poll.voteCount) / Double((poll.voteCount + poll.voteCount2)) * Double(100)).roundTo(places: 2)
-        poll.votePercent2 = (Double(poll.voteCount2) / Double((poll.voteCount + poll.voteCount2)) * Double(100)).roundTo(places: 2)
-        
+        VoteService.voting(for: User.current, poll: poll)
         tableView.reloadData()
     }
 
@@ -200,6 +178,7 @@ extension Double {
     func roundTo(places:Int) -> Double {
         let divisor = pow(10.0, Double(places))
         return (self * divisor).rounded() / divisor
+        
     }
 }
 

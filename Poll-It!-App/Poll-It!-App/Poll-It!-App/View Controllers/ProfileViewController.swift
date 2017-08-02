@@ -13,10 +13,12 @@ import FirebaseAuth
 class ProfileViewController: UIViewController {
 
 
+    @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var signOutButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
         // Do any additional setup after loading the view.
     }
 
@@ -53,3 +55,5 @@ class ProfileViewController: UIViewController {
     */
 
 }
+
+

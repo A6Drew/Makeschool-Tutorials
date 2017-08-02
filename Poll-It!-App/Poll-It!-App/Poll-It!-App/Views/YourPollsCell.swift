@@ -44,12 +44,14 @@ class YourPollsCell: UITableViewCell {
     @IBAction func pollText1ButtonTapped(_ sender: UIButton) {
         
         delegate?.didTapVoteButton(sender, pollNum: 1, on: self)
+        //pollText2Button.isEnabled = false
         
     }
     
     @IBAction func pollText2ButtonTapped(_ sender: UIButton) {
         
         delegate?.didTapVoteButton(sender, pollNum: 2, on: self)
+        //pollText1Button.isEnabled = false
     }
     
     
