@@ -17,6 +17,7 @@ class HomeViewController: UIViewController {
      var polls = [Poll]()
 
     
+    
    
 
     @IBOutlet weak var tableView: UITableView!
@@ -60,9 +61,6 @@ class HomeViewController: UIViewController {
     }
 
     
-    @IBAction func pollText1ButtonTapped(_ sender: UIButton) {
-    }
-    
 
 }
 
@@ -70,6 +68,7 @@ extension HomeViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return polls.count
     }
+    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "YourPollsCell", for: indexPath) as! YourPollsCell

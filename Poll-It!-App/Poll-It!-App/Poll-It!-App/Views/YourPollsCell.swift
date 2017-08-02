@@ -38,6 +38,19 @@ class YourPollsCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+        
+        let percentColor = UIColor(red: 240/255, green: 248/255, blue: 242/255, alpha: 1.0).cgColor
+        pollText1Percent.layer.borderColor = percentColor
+        pollText1Percent.layer.borderWidth = 2
+        pollText2Percent.layer.borderColor = percentColor
+        pollText2Percent.layer.borderWidth = 2
+        
+//        let pollColor = UIColor(red: 240/255, green: 248/255, blue: 242/255, alpha: 1.0).cgColor
+//        pollText1View.layer.borderColor = pollColor
+//        pollText1View.layer.borderWidth = 2
+//        pollText2View.layer.borderColor = pollColor
+//        pollText2View.layer.borderWidth = 2
+
     }
     
     
