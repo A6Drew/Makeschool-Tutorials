@@ -44,14 +44,26 @@ struct UserService {
     
     static func polls(for user: User, completion: @escaping ([Poll]) -> Void) {
         let ref = Database.database().reference().child("users").child(user.uid).child("polls")
+        let pollKey = ref.key
+        let ref2 = Database.database().reference().child("polls").child(pollKey)
         
         ref.observeSingleEvent(of: .value, with: { (snapshot) in
             guard let snapshot = snapshot.children.allObjects as? [DataSnapshot] else {
                 return completion([])
             }
+            ref2.observeSingleEvent(of: .value, with: { (snapshot) in
+                guard let snapshot2 = snapshot.children.allObjects as? [DataSnapshot] else {
+                    return completion([])
+                }
+//                for 
+//                if snapshot.key == snapshot2.key {
+//                
+//                let polls = snapshot.reversed().flatMap(Poll.init)
+//                completion(polls)
+//                }
+            })
             
-            let polls = snapshot.reversed().flatMap(Poll.init)
-            completion(polls)
+            
         }
    )}
 //

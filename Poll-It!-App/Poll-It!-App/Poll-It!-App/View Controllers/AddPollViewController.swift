@@ -31,12 +31,12 @@ class AddPollViewController: UIViewController, UITextViewDelegate {
         pollTextView1.delegate = self
         pollTextView2.delegate = self
         
-        let color = UIColor(red: 186/255, green: 186/255, blue: 186/255, alpha: 1.0).cgColor
+        let color = UIColor(red: 51/255, green: 51/255, blue: 51/255, alpha: 1.0).cgColor
         pollTextView1.layer.borderColor = color
         pollTextView1.layer.borderWidth = 2
         pollTextView1.layer.cornerRadius = 5
         
-        let color2 = UIColor(red: 186/255, green: 186/255, blue: 186/255, alpha: 1.0).cgColor
+        let color2 = UIColor(red: 51/255, green: 51/255, blue: 51/255, alpha: 1.0).cgColor
         pollTextView2.layer.borderColor = color2
         pollTextView2.layer.borderWidth = 2
         pollTextView2.layer.cornerRadius = 5
@@ -47,7 +47,18 @@ class AddPollViewController: UIViewController, UITextViewDelegate {
     }
     
     
-    
+    func textView(textView: UITextView, shouldChangeTextInRange range: NSRange, replacementText text: String) -> Bool {
+        
+        let newText = (textView.text as NSString).replacingCharacters(in: range, with: text)
+        
+        let numberOfChars = newText.characters.count
+        
+        return numberOfChars < 5
+        
+    }
+
+
+
     
 //    func textViewShouldReturn(_ textView: UITextView) -> Bool {
 //        self.view.endEditing(true)
@@ -64,7 +75,7 @@ class AddPollViewController: UIViewController, UITextViewDelegate {
 //    }
     
 
-        
+    
         
     @IBAction func doneButtonTapped(_ sender: UIButton) {
         guard let pollText2 = pollTextView2.text, !pollText2.isEmpty else {
@@ -77,7 +88,9 @@ class AddPollViewController: UIViewController, UITextViewDelegate {
         let userAttrs = [ "pollText": pollText, "pollText2": pollText2]
         let pollAttrs = [ "pollText": pollText, "pollText2": pollText2, "username": User.current.username, "voteCount": 0, "voteCount2": 0] as [String : Any]
 
-        
+        if(self.pollTextView1.text.characters.count > 60) {
+            self.pollTextView1.endEditing(true)
+        }
         
         
         let ref = Database.database().reference().child("users").child(User.current.uid).child("polls").childByAutoId()

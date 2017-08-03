@@ -35,6 +35,8 @@ class HomeViewController: UIViewController {
             
         }
         
+     
+        
         
         configureTableView()
         
@@ -44,7 +46,15 @@ class HomeViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         self.tabBarController?.delegate = self
         
+        PollService.allPolls(for: User.current) { (polls) in
+            
+            self.polls = polls
+            self.tableView.reloadData()
+            
+        }
         
+        
+
         
     
         

@@ -14,19 +14,25 @@ protocol YourPollsCellDelegate: class {
     
 }
 
-class YourPollsCell: UITableViewCell {
+class YourPollsCell: UITableViewCell, UITextFieldDelegate {
     
     weak var delegate: YourPollsCellDelegate?
 
     @IBOutlet weak var pollUsername: UILabel!
     @IBOutlet weak var pollText1Button: UIButton!
     @IBOutlet weak var pollText2Button: UIButton!
-
-  
     @IBOutlet weak var pollText1View: UITextView!
     @IBOutlet weak var pollText2View: UITextView!
     @IBOutlet weak var pollText1Percent: UILabel!
     @IBOutlet weak var pollText2Percent: UILabel!
+    
+    
+    @IBOutlet weak var profilePollText1: UITextView!
+    @IBOutlet weak var profilePollText2: UITextView!
+    
+    @IBOutlet weak var profilePollText1Per: UILabel!
+    
+    @IBOutlet weak var profilePollText2Per: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -39,7 +45,7 @@ class YourPollsCell: UITableViewCell {
 
         // Configure the view for the selected state
         
-        let percentColor = UIColor(red: 240/255, green: 248/255, blue: 242/255, alpha: 1.0).cgColor
+        let percentColor = UIColor(red: 115/255, green: 21/255, blue: 54/255, alpha: 1.0).cgColor
         pollText1Percent.layer.borderColor = percentColor
         pollText1Percent.layer.borderWidth = 2
         pollText2Percent.layer.borderColor = percentColor
@@ -50,6 +56,17 @@ class YourPollsCell: UITableViewCell {
 //        pollText1View.layer.borderWidth = 2
 //        pollText2View.layer.borderColor = pollColor
 //        pollText2View.layer.borderWidth = 2
+        
+        
+//        let color = UIColor(red: 0/255, green: 205/255, blue: 205/255, alpha: 1.0).cgColor
+//        pollText1View.layer.borderColor = color
+//        pollText1View.layer.borderWidth = 2
+//
+//        
+//        let color2 = UIColor(red: 0/255, green: 205/255, blue: 205/255, alpha: 1.0).cgColor
+//        pollText2View.layer.borderColor = color2
+//        pollText2View.layer.borderWidth = 2
+
 
     }
     
@@ -66,6 +83,8 @@ class YourPollsCell: UITableViewCell {
         delegate?.didTapVoteButton(sender, pollNum: 2, on: self)
         //pollText1Button.isEnabled = false
     }
+    
+
     
     
 }
