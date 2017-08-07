@@ -21,14 +21,18 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+    
         
-        UserService.polls(for: User.current) { (polls) in
-            self.polls = polls
-            self.tableView.reloadData()
-        }
         configureTableView()
         
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        UserService.polls { (polls) in
+            self.polls = polls
+            self.tableView.reloadData()
+        }
     }
 
   
@@ -78,13 +82,14 @@ extension ProfileViewController: UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "YourPollsCell", for: indexPath) as! YourPollsCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ProfilePollsCell", for: indexPath) as! ProfilePollsCell
         let poll = polls[indexPath.row]
         
         cell.delegate = self
         
         cell.profilePollText1.text = poll.content
         cell.profilePollText2.text = poll.content2
+        cell.profilePollTitle.text = poll.title 
         
         poll.votePercent =
             (Double(poll.voteCount) / Double((poll.voteCount + poll.voteCount2)) * Double(100)).roundTo2(places: 2)
@@ -116,20 +121,21 @@ extension ProfileViewController: UITableViewDataSource {
         
         cell.profilePollText1Per.text = String(format: "%.0f", poll.votePercent)
         cell.profilePollText2Per.text = String(format: "%.0f", poll.votePercent2)
-        cell.pollUsername.text = String(poll.poster!)
         return cell
     }
     
 }
 
-extension ProfileViewController: YourPollsCellDelegate {
-    func didTapVoteButton(_ pollTextButton: UIButton, pollNum: Int, on cell: YourPollsCell) {
+extension ProfileViewController: ProfilePollsCellDelegate {
+    func didTapVoteButton(_profileTextButton: UIButton, pollNum: Int, on cell: ProfilePollsCell) {
         
         guard let indexPath = tableView.indexPath(for: cell)
             else { return }
         
         
         let poll = polls[indexPath.row]
+        
+  
         
         if pollNum == 1 {
             
@@ -173,8 +179,8 @@ extension ProfileViewController: YourPollsCellDelegate {
             
         }
         
-        VoteService.voting(for: User.current, poll: poll)
-        tableView.reloadData()
+//        VoteService.voting(for: User.current, poll: poll)
+//        tableView.reloadData()
     }
     
 }
@@ -188,6 +194,19 @@ extension Double {
 }
 
 
+extension ProfileViewController: UITabBarControllerDelegate {
+    func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
+        if viewController.tabBarItem.tag == 1 {
+            
+            let vc = storyboard?.instantiateViewController(withIdentifier: "add") as! AddPollViewController
+            
+            self.present(vc, animated: true, completion: nil)
+            
+            return false
+        }
+        return true
+    }
+}
 
 
 

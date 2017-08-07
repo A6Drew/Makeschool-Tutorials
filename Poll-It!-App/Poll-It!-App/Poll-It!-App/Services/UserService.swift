@@ -42,61 +42,36 @@ struct UserService {
         }
     }
     
-    static func polls(for user: User, completion: @escaping ([Poll]) -> Void) {
-        let ref = Database.database().reference().child("users").child(user.uid).child("polls")
-        let pollKey = ref.key
-        let ref2 = Database.database().reference().child("polls").child(pollKey)
+    static func polls(completion: @escaping ([Poll]) -> Void) {
+        let ref = Database.database().reference().child("users").child(User.current.uid).child("polls")
+        let ref2 = Database.database().reference().child("polls")
         
         ref.observeSingleEvent(of: .value, with: { (snapshot) in
-            guard let snapshot = snapshot.children.allObjects as? [DataSnapshot] else {
+            guard let snapshot1 = snapshot.value as? [String: Any] else {
                 return completion([])
             }
+            
             ref2.observeSingleEvent(of: .value, with: { (snapshot) in
-                guard let snapshot2 = snapshot.children.allObjects as? [DataSnapshot] else {
+                guard let snapshot2 = snapshot.value as? [String: Any] else {
                     return completion([])
                 }
-//                for 
-//                if snapshot.key == snapshot2.key {
-//                
-//                let polls = snapshot.reversed().flatMap(Poll.init)
-//                completion(polls)
-//                }
+                var myPolls = [Poll]()
+
+                for key1 in snapshot1.keys {
+                    
+                    for key2 in snapshot2.keys {
+                        
+                        if key1 == key2 {                     
+                            myPolls.append(Poll(myPolls: (snapshot2[key2] as! [String: Any]), key: key2))
+                            
+                        }
+                    }
+                }
+                
+                
+                return completion(myPolls)
+
             })
-            
-            
         }
    )}
-//
-//    static func polls(for user: User, completion: @escaping ([Poll]) -> Void) {
-//        let ref = Database.database().reference().child("polls").child(user.uid)
-//        ref.observeSingleEvent(of: .value, with: { (snapshot) in
-//            guard let snapshot = snapshot.children.allObjects as? [DataSnapshot] else {
-//                return completion([])
-//            }
-//            
-//            let dispatchGroup = DispatchGroup()
-//            
-//            let polls: [Poll] =
-//                snapshot
-//                    .reversed()
-//                    .flatMap {
-//                        guard let poll = Poll(snapshot: $0)
-//                            else { return nil }
-//                        
-//                        dispatchGroup.enter()
-//                        
-//                        VoteService.isPollVoted(poll) { (isVoted) in
-//                            poll.isVoted = isVoted
-//                            
-//                            dispatchGroup.leave()
-//                        }
-//                        
-//                        return poll
-//            }
-//            
-//            dispatchGroup.notify(queue: .main, execute: {
-//                completion(polls)
-//            })
-//        })
-//    }
 }

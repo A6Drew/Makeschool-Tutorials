@@ -61,14 +61,9 @@ class LoginViewController: UIViewController {
 extension LoginViewController: FUIAuthDelegate {
     func authUI(_ authUI: FUIAuth, didSignInWith user: FIRUser?, error: Error?) {
         if let error = error {
-            assertionFailure("Error signing in: \(error.localizedDescription)")
-            performSegue(withIdentifier: "first", sender: nil)
+            print("Error signing in \(error.localizedDescription)")
             return
         }
-        
-
-        
-        
         // 1
         guard let user = user
             else {return}

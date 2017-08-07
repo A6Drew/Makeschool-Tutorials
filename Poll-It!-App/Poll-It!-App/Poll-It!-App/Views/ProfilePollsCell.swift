@@ -9,7 +9,7 @@
 import UIKit
 
 protocol ProfilePollsCellDelegate: class {
-    func didTapVoteButton(_polltextButton: UIButton, pollNum: Int, on cell: ProfilePollsCell )
+    func didTapVoteButton(_profileTextButton: UIButton, pollNum: Int, on cell: ProfilePollsCell )
 }
 
 
@@ -20,7 +20,14 @@ class ProfilePollsCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        
     }
+    
+    
+    
+    @IBOutlet weak var profilePollTitle: UITextView!
+    
     @IBOutlet weak var profilePollText1: UITextView!
 
     @IBOutlet weak var profilePollText2: UITextView!
@@ -33,16 +40,22 @@ class ProfilePollsCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+        
+        let percentColor = UIColor(red: 115/255, green: 21/255, blue: 54/255, alpha: 1.0).cgColor
+        profilePollText1Per.layer.borderColor = percentColor
+        profilePollText1Per.layer.borderWidth = 2
+        profilePollText2Per.layer.borderColor = percentColor
+        profilePollText2Per.layer.borderWidth = 2
     }
     
     @IBAction func profilePollText1Tapped(_ sender: UIButton) {
         
-        delegate?.didTapVoteButton(_polltextButton: sender, pollNum: 1, on: self)
+        delegate?.didTapVoteButton(_profileTextButton: sender, pollNum: 1, on: self)
     }
     
     @IBAction func profilePollText2Tapped(_ sender: UIButton) {
         
-        delegate?.didTapVoteButton(_polltextButton: sender, pollNum: 2, on: self)
+        delegate?.didTapVoteButton(_profileTextButton: sender, pollNum: 2, on: self)
         
     }
 

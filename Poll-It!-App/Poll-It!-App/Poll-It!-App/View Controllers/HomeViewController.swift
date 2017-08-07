@@ -28,13 +28,13 @@ class HomeViewController: UIViewController {
         self.tabBarController?.delegate = self 
         
         
-        PollService.allPolls(for: User.current) { (polls) in
-            
-            self.polls = polls
-            self.tableView.reloadData()
-            
-        }
-        
+//        PollService.allPolls(for: User.current) { (polls) in
+//            
+//            self.polls = polls
+//            self.tableView.reloadData()
+//            
+//        }
+//        
      
         
         
@@ -88,6 +88,7 @@ extension HomeViewController: UITableViewDataSource {
         
         cell.pollText1View.text = poll.content
         cell.pollText2View.text = poll.content2
+        cell.pollTitle.text = poll.title
         
         poll.votePercent =
             (Double(poll.voteCount) / Double((poll.voteCount + poll.voteCount2)) * Double(100)).roundTo(places: 2)
@@ -119,7 +120,8 @@ extension HomeViewController: UITableViewDataSource {
         
         cell.pollText1Percent.text = String(format: "%.0f", poll.votePercent)
         cell.pollText2Percent.text = String(format: "%.0f", poll.votePercent2)
-        cell.pollUsername.text = String(poll.poster!)
+        
+//        cell.pollUsername.text = String(poll.poster!)
         
         return cell
     }

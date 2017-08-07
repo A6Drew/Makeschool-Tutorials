@@ -18,7 +18,9 @@ class YourPollsCell: UITableViewCell, UITextFieldDelegate {
     
     weak var delegate: YourPollsCellDelegate?
 
-    @IBOutlet weak var pollUsername: UILabel!
+    
+
+    @IBOutlet weak var pollTitle: UITextView!
     @IBOutlet weak var pollText1Button: UIButton!
     @IBOutlet weak var pollText2Button: UIButton!
     @IBOutlet weak var pollText1View: UITextView!
@@ -26,13 +28,8 @@ class YourPollsCell: UITableViewCell, UITextFieldDelegate {
     @IBOutlet weak var pollText1Percent: UILabel!
     @IBOutlet weak var pollText2Percent: UILabel!
     
-    
-    @IBOutlet weak var profilePollText1: UITextView!
-    @IBOutlet weak var profilePollText2: UITextView!
-    
-    @IBOutlet weak var profilePollText1Per: UILabel!
-    
-    @IBOutlet weak var profilePollText2Per: UILabel!
+    @IBOutlet weak var background: UIView!
+  
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -50,6 +47,8 @@ class YourPollsCell: UITableViewCell, UITextFieldDelegate {
         pollText1Percent.layer.borderWidth = 2
         pollText2Percent.layer.borderColor = percentColor
         pollText2Percent.layer.borderWidth = 2
+        
+     
         
 //        let pollColor = UIColor(red: 240/255, green: 248/255, blue: 242/255, alpha: 1.0).cgColor
 //        pollText1View.layer.borderColor = pollColor

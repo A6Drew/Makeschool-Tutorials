@@ -15,6 +15,7 @@ class AddPollViewController: UIViewController, UITextViewDelegate {
 
     
 
+    @IBOutlet weak var pollTitleView: UITextView!
     @IBOutlet weak var pollTextView1: UITextView!
     @IBOutlet weak var pollTextView2: UITextView!
   
@@ -84,9 +85,13 @@ class AddPollViewController: UIViewController, UITextViewDelegate {
         guard let pollText = pollTextView1.text, !pollText.isEmpty else {
             return
         }
+        
+        guard let pollTitle = pollTitleView.text, !pollTitle.isEmpty else {
+            return
+        }
     
-        let userAttrs = [ "pollText": pollText, "pollText2": pollText2]
-        let pollAttrs = [ "pollText": pollText, "pollText2": pollText2, "username": User.current.username, "voteCount": 0, "voteCount2": 0] as [String : Any]
+        let userAttrs = [ "pollText": pollText, "pollText2": pollText2, "pollTitle": pollTitle]
+        let pollAttrs = [ "pollText": pollText, "pollText2": pollText2, "pollTitle": pollTitle, "username": User.current.username, "voteCount": 0, "voteCount2": 0] as [String : Any]
 
         if(self.pollTextView1.text.characters.count > 60) {
             self.pollTextView1.endEditing(true)
