@@ -26,7 +26,32 @@ struct PollService {
         }
             
         )}
+    
+    static func flag(_ poll: Poll) {
+
+        guard let pollKey = poll.key else { return }
+
+        let flaggedPostRef = Database.database().reference().child("flaggedPosts").child(pollKey)
+        
+        let flaggedDict = ["pollText1": poll.content,
+                           "pollText2": poll.content2,
+                           "pollTitle": poll.title,
+                           "poster_uid": poll.poster.uid,
+                           "reporter_uid": User.current.uid]
+
+        flaggedPostRef.updateChildValues(flaggedDict)
+        
+        let flagCountRef = flaggedPostRef.child("flag_count")
+        flagCountRef.runTransactionBlock({ (mutableData) -> TransactionResult in
+            let currentCount = mutableData.value as? Int ?? 0
+            
+            mutableData.value = currentCount + 1
+            
+            return TransactionResult.success(withValue: mutableData)
+        })
     }
+}
+
 
    
     

@@ -20,7 +20,7 @@ struct VoteService {
         ref.updateChildValues(voteAttrs)
         
         let voteAttrs2 = ["isVoted": poll.isVoted[user], "isVoted2": poll.isVoted2[user]]
-        ref.child(user.uid).updateChildValues(voteAttrs2)
+        ref.child("voted users").child(user.uid).updateChildValues(voteAttrs2)
     
     }
     

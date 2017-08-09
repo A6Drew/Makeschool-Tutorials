@@ -25,7 +25,7 @@ class Poll: NSObject {
     var isVoted = [User : Bool]()
     var isVoted2 = [User : Bool]()
 //    var isVoted = false
-//    let poster: String?
+    let poster: User
 
     
     init?(snapshot: DataSnapshot) {
@@ -33,7 +33,8 @@ class Poll: NSObject {
             let pollContent = dict["pollText"] as? String,
             let pollContent2 = dict["pollText2"] as? String,
             let pollTitle = dict["pollTitle"] as? String,
-//            let username = dict["username"] as? String,
+            let username = dict["username"] as? String,
+            let uid = dict["uid"] as? String,
             let pollVoteCount = dict["voteCount"] as? Int,
             let pollVoteCount2 = dict["voteCount2"] as? Int
             else { return nil }
@@ -42,7 +43,7 @@ class Poll: NSObject {
         self.content = pollContent
         self.content2 = pollContent2
         self.title = pollTitle
-//        self.poster = username
+        self.poster = User(uid: uid, username: username)
         self.voteCount = pollVoteCount
         self.voteCount2 = pollVoteCount2
         
@@ -58,12 +59,14 @@ class Poll: NSObject {
     }
     
     init(myPolls: [String: Any], key: String) {
+ 
         self.key = key
         self.content = myPolls["pollText"] as? String
         self.content2 = myPolls["pollText2"] as? String
         self.title = myPolls["pollTitle"] as? String
         self.voteCount = myPolls["voteCount"] as! Int
         self.voteCount2 = myPolls["voteCount2"] as! Int
+        self.poster = User(uid: "", username: myPolls["username"] as! String)
         
         
     }

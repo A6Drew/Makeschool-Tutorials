@@ -20,6 +20,7 @@
 		3A3FFE9B1F290A8100A3C2C9 /* VoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3FFE9A1F290A8100A3C2C9 /* VoteService.swift */; };
 		3A3FFE9D1F290F7D00A3C2C9 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3FFE9C1F290F7D00A3C2C9 /* ProfileViewController.swift */; };
 		3A4DF0031F27C9870077D80E /* YourPollsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4DF0021F27C9870077D80E /* YourPollsCell.swift */; };
+		3A59C7361F3B89920078C742 /* CreditsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A59C7351F3B89920078C742 /* CreditsViewController.swift */; };
 		3A7BBEE01F327C7B006D2E37 /* ProfilePollsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7BBEDF1F327C7B006D2E37 /* ProfilePollsCell.swift */; };
 		3ACA753F1F25013D0073D84B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACA753E1F25013D0073D84B /* AppDelegate.swift */; };
 		3ACA75461F25013D0073D84B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3ACA75451F25013D0073D84B /* Assets.xcassets */; };
@@ -48,6 +49,7 @@
 		3A3FFE9A1F290A8100A3C2C9 /* VoteService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VoteService.swift; path = Services/VoteService.swift; sourceTree = "<group>"; };
 		3A3FFE9C1F290F7D00A3C2C9 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = "Poll-It!-App/View Controllers/ProfileViewController.swift"; sourceTree = "<group>"; };
 		3A4DF0021F27C9870077D80E /* YourPollsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = YourPollsCell.swift; path = Views/YourPollsCell.swift; sourceTree = "<group>"; };
+		3A59C7351F3B89920078C742 /* CreditsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreditsViewController.swift; path = "Poll-It!-App/View Controllers/CreditsViewController.swift"; sourceTree = "<group>"; };
 		3A7BBEDF1F327C7B006D2E37 /* ProfilePollsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfilePollsCell.swift; path = Views/ProfilePollsCell.swift; sourceTree = "<group>"; };
 		3ACA753B1F25013D0073D84B /* Poll-It!-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Poll-It!-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ACA753E1F25013D0073D84B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 				3A3FFE9C1F290F7D00A3C2C9 /* ProfileViewController.swift */,
 				3A3F306E1F26A25E009CE4E3 /* FirstViewController.swift */,
 				3AEAFCAA1F2BA8320038AABC /* MainTabBarViewController.swift */,
+				3A59C7351F3B89920078C742 /* CreditsViewController.swift */,
 			);
 			name = "View Controllers";
 			path = ..;
@@ -338,6 +341,7 @@
 				3AEAFCAB1F2BA8320038AABC /* MainTabBarViewController.swift in Sources */,
 				3AE295111F250A9C00F61815 /* CreateUsernameViewController.swift in Sources */,
 				3ACA753F1F25013D0073D84B /* AppDelegate.swift in Sources */,
+				3A59C7361F3B89920078C742 /* CreditsViewController.swift in Sources */,
 				3A3FFE9B1F290A8100A3C2C9 /* VoteService.swift in Sources */,
 				3A3FFE9D1F290F7D00A3C2C9 /* ProfileViewController.swift in Sources */,
 				3A4DF0031F27C9870077D80E /* YourPollsCell.swift in Sources */,

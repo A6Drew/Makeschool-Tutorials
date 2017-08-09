@@ -70,6 +70,31 @@ class HomeViewController: UIViewController {
         tableView.separatorStyle = .none
     }
 
+    func reportButtonTap(from cell: YourPollsCell) {
+        guard let indexPath = tableView.indexPath(for: cell) else { return }
+        
+        let poll = polls[indexPath.row]
+        let poster = poll.poster.uid
+        
+        let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        
+        if poster != User.current.uid {
+            let flagAction = UIAlertAction(title: "Report as Inappropriate", style: .default) { _ in
+                PollService.flag(poll)
+                
+                let okAlert = UIAlertController(title: nil, message: "The post has been flagged.", preferredStyle: .alert)
+                okAlert.addAction(UIAlertAction(title: "Ok", style: .default))
+                self.present(okAlert, animated: true)
+            }
+            
+            alertController.addAction(flagAction)
+        }
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alertController.addAction(cancelAction)
+        
+        present(alertController, animated: true, completion: nil)
+    }
     
 
 }
@@ -85,6 +110,7 @@ extension HomeViewController: UITableViewDataSource {
         let poll = polls[indexPath.row]
         
         cell.delegate = self
+        cell.didTapOptionsButtonForCell = reportButtonTap(from:)
         
         cell.pollText1View.text = poll.content
         cell.pollText2View.text = poll.content2

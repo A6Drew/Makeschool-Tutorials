@@ -29,8 +29,7 @@ class CreateUsernameViewController: UIViewController, UITextFieldDelegate {
     }
     
     
-    
-    
+
     
     
     @IBAction func doneButtonTapped(_ sender: UIButton) {
@@ -38,7 +37,39 @@ class CreateUsernameViewController: UIViewController, UITextFieldDelegate {
             let username = usernameTextField.text,
             !username.isEmpty else { return }
         
-        UserService.create(firUser, username: username) { (user) in
+
+        let alertController = UIAlertController(title: "Error", message: "Your have reached the character limit", preferredStyle: UIAlertControllerStyle.alert)
+        
+        let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default)
+        {
+            (result : UIAlertAction) -> Void in
+        }
+        alertController.addAction(okAction)
+        
+        let dispatchGroup = DispatchGroup()
+        
+        
+        let checkRef = Database.database().reference().child("users")
+        
+        dispatchGroup.enter()
+        
+        checkRef.observeSingleEvent(of: .value, with: { (snapshot) in
+            let snap = snapshot.value as? [String: Any]
+            
+            for value in (snap?.values)! {
+                let userDictionary = value as? [String: String]
+                if let username = userDictionary?["username"] {
+                    if username == self.usernameTextField.text {
+                        self.present(alertController, animated: true, completion: nil)
+                        return
+                    }
+                }
+            }
+            dispatchGroup.leave()
+        })
+
+        
+        dispatchGroup.notify(queue: .main) { 
             UserService.create(firUser, username: username) { (user) in
                 guard let user = user else {
                     // handle error
@@ -51,13 +82,9 @@ class CreateUsernameViewController: UIViewController, UITextFieldDelegate {
                 self.view.window?.rootViewController = initialViewController
                 self.view.window?.makeKeyAndVisible()
             }
-            //2
             let userAttrs = ["username": username]
             
-            //3
             let ref = Database.database().reference().child("users").child(firUser.uid)
-            
-            //4
             
             ref.setValue(userAttrs) { (error, ref) in
                 if let error = error {
@@ -66,10 +93,10 @@ class CreateUsernameViewController: UIViewController, UITextFieldDelegate {
                     return
                 }
                 
-                //5
                 ref.observeSingleEvent(of: .value, with: { (snapshot) in
                     let user = User(snapshot: snapshot)
                 })
+                
             }
         }
         
@@ -87,25 +114,6 @@ class CreateUsernameViewController: UIViewController, UITextFieldDelegate {
         textField.resignFirstResponder()
         return true;
     }
-}
-
-            //    override func didReceiveMemoryWarning() {
-            //        super.didReceiveMemoryWarning()
-            //        // Dispose of any resources that can be recreated.
-            //    }
-            
-            
-            /*
-             // MARK: - Navigation
-             
-             // In a storyboard-based application, you will often want to do a little preparation before navigation
-             override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-             // Get the new view controller using segue.destinationViewController.
-             // Pass the selected object to the new view controller.
-             }
-             */
-            
-
-
     
-
+    
+}

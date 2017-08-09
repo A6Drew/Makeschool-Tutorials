@@ -19,6 +19,7 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var loginButton: UIButton!
     
+    @IBOutlet weak var registerButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,6 +48,25 @@ class LoginViewController: UIViewController {
         
     }
     
+    @IBAction func registerButtonTapped(_ sender: UIButton) {
+        
+        // 1
+        guard let authUI = FUIAuth.defaultAuthUI()
+            else { return }
+        
+        // 2
+        authUI.delegate = self
+        
+        // 3
+        let authViewController = authUI.authViewController()
+        
+        let userDefault = UserDefaults.standard
+        userDefault.set(true, forKey: "loggedIn")
+        userDefault.synchronize()
+        
+        present(authViewController, animated: true)
+        
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

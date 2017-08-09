@@ -50,7 +50,10 @@ class User: NSObject {
         self.uid = snapshot.key
         self.username = username
         super.init()
+        
     }
+    
+    
     
     // 1
     private static var _current: User?
@@ -65,6 +68,7 @@ class User: NSObject {
         
         // 4
         return currentUser
+        
     }
     
     // MARK: - Class Methods
@@ -81,6 +85,7 @@ class User: NSObject {
         
         self.uid = uid
         self.username = username
+        
         
         super.init()
     }

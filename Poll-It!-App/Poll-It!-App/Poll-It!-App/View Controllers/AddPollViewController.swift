@@ -18,6 +18,8 @@ class AddPollViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var pollTitleView: UITextView!
     @IBOutlet weak var pollTextView1: UITextView!
     @IBOutlet weak var pollTextView2: UITextView!
+    @IBOutlet weak var cancelButton: UIButton!
+    @IBOutlet weak var doneButton: UIButton!
   
     @IBOutlet weak var addPoll: UITabBarItem!
 
@@ -25,24 +27,29 @@ class AddPollViewController: UIViewController, UITextViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        pollTextView1.delegate = self
+        pollTextView2.delegate = self
+        pollTitleView.delegate = self
+        
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(AddPollViewController.dismissKeyboard))
         
         view.addGestureRecognizer(tap)
         
-        pollTextView1.delegate = self
-        pollTextView2.delegate = self
+        
         
         let color = UIColor(red: 51/255, green: 51/255, blue: 51/255, alpha: 1.0).cgColor
         pollTextView1.layer.borderColor = color
         pollTextView1.layer.borderWidth = 2
-        pollTextView1.layer.cornerRadius = 5
+        pollTextView1.layer.cornerRadius = 7.5  
         
         let color2 = UIColor(red: 51/255, green: 51/255, blue: 51/255, alpha: 1.0).cgColor
         pollTextView2.layer.borderColor = color2
         pollTextView2.layer.borderWidth = 2
-        pollTextView2.layer.cornerRadius = 5
+        pollTextView2.layer.cornerRadius = 7.5
         
-        
+        cancelButton.layer.cornerRadius = 20
+        doneButton.layer.cornerRadius = 20
+        pollTitleView.layer.cornerRadius = 7.5
 
         // Do any additional setup after loading the view.
     }
@@ -76,8 +83,50 @@ class AddPollViewController: UIViewController, UITextViewDelegate {
 //    }
     
 
-    
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
         
+        let alertController = UIAlertController(title: "Error", message: "Your have reached the character limit", preferredStyle: UIAlertControllerStyle.alert)
+        
+        let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default)
+        {
+            (result : UIAlertAction) -> Void in
+        }
+        alertController.addAction(okAction)
+        
+        
+        
+        if pollTextView1.text.characters.count >= 141
+        {
+            pollTextView1.endEditing(true)
+            pollTextView1.deleteBackward()
+            self.present(alertController, animated: true, completion: nil)
+            
+
+        }
+        
+        if pollTextView2.text.characters.count >= 141
+        {
+            pollTextView2.endEditing(true)
+            pollTextView2.deleteBackward()
+            self.present(alertController, animated: true, completion: nil)
+            
+
+        }
+        if pollTitleView.text.characters.count >= 75
+        
+        {
+            pollTitleView.endEditing(true)
+            pollTitleView.deleteBackward()
+            self.present(alertController, animated: true, completion: nil)
+            
+            
+            
+            
+        }
+        
+        return true
+    }
+    
     @IBAction func doneButtonTapped(_ sender: UIButton) {
         guard let pollText2 = pollTextView2.text, !pollText2.isEmpty else {
             return
@@ -91,7 +140,7 @@ class AddPollViewController: UIViewController, UITextViewDelegate {
         }
     
         let userAttrs = [ "pollText": pollText, "pollText2": pollText2, "pollTitle": pollTitle]
-        let pollAttrs = [ "pollText": pollText, "pollText2": pollText2, "pollTitle": pollTitle, "username": User.current.username, "voteCount": 0, "voteCount2": 0] as [String : Any]
+        let pollAttrs = [ "pollText": pollText, "pollText2": pollText2, "pollTitle": pollTitle, "username": User.current.uid, "uid": User.current.uid, "voteCount": 0, "voteCount2": 0] as [String : Any]
 
         if(self.pollTextView1.text.characters.count > 60) {
             self.pollTextView1.endEditing(true)
@@ -130,18 +179,18 @@ class AddPollViewController: UIViewController, UITextViewDelegate {
         view.endEditing(true)
     }
     
-    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool
-    {
-        if(text == "\n")
-        {
-            view.endEditing(true)
-            return false
-        }
-        else
-        {
-            return true
-        }
-    }
+//    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool
+//    {
+//        if(text == "\n")
+//        {
+//            view.endEditing(true)
+//            return false
+//        }
+//        else
+//        {
+//            return true
+//        }
+//    }
 }
     
     

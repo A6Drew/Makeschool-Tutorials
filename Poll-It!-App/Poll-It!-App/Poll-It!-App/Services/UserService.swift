@@ -63,7 +63,6 @@ struct UserService {
                         
                         if key1 == key2 {                     
                             myPolls.append(Poll(myPolls: (snapshot2[key2] as! [String: Any]), key: key2))
-                            
                         }
                     }
                 }

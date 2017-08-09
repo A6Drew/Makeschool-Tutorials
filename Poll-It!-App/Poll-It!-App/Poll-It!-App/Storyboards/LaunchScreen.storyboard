@@ -24,22 +24,22 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Launch Background" translatesAutoresizingMaskIntoConstraints="NO" id="L0A-IO-BbQ">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Launch" translatesAutoresizingMaskIntoConstraints="NO" id="wuH-dz-Yqu">
-                                <rect key="frame" x="149.5" y="295.5" width="75" height="75"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Launch" translatesAutoresizingMaskIntoConstraints="NO" id="0Fy-pe-Ljt">
+                                <rect key="frame" x="150" y="295.5" width="75" height="75"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="75" id="6ye-RT-OnQ"/>
-                                    <constraint firstAttribute="width" constant="75" id="K3Y-FC-u0l"/>
+                                    <constraint firstAttribute="height" constant="75" id="f0B-X2-90c"/>
+                                    <constraint firstAttribute="width" constant="75" id="z8y-fb-7d8"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="wuH-dz-Yqu" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="6m5-ni-Nai"/>
                             <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="L0A-IO-BbQ" secondAttribute="bottom" id="AR1-9d-SGs"/>
+                            <constraint firstItem="0Fy-pe-Ljt" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Pz5-uN-5h4"/>
                             <constraint firstItem="L0A-IO-BbQ" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="VyZ-qC-4vV"/>
                             <constraint firstAttribute="trailing" secondItem="L0A-IO-BbQ" secondAttribute="trailing" id="aLU-4Y-vk8"/>
                             <constraint firstItem="L0A-IO-BbQ" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="fc3-Ls-I1k"/>
-                            <constraint firstItem="wuH-dz-Yqu" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="rvp-nw-xYw"/>
+                            <constraint firstItem="0Fy-pe-Ljt" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="qZp-oP-5sg"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -49,7 +49,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Launch" width="143" height="120"/>
+        <image name="Launch" width="323" height="287"/>
         <image name="Launch Background" width="256" height="256"/>
     </resources>
 </document>
