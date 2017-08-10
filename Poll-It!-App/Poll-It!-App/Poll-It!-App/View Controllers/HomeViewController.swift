@@ -27,20 +27,16 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         self.tabBarController?.delegate = self 
         
-        
-//        PollService.allPolls(for: User.current) { (polls) in
-//            
-//            self.polls = polls
-//            self.tableView.reloadData()
-//            
-//        }
-//        
+        if User.current.uid == "nil" {
+            let mainStoryboard = UIStoryboard(name: "Login", bundle: nil)
+            let viewController = mainStoryboard.instantiateViewController(withIdentifier: "loginVC") as! LoginViewController
+            UIApplication.shared.keyWindow?.rootViewController = viewController
+        }
      
         
         
         configureTableView()
         
-        // Do any additional setup after loading the view.
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -85,6 +81,7 @@ class HomeViewController: UIViewController {
                 let okAlert = UIAlertController(title: nil, message: "The post has been flagged.", preferredStyle: .alert)
                 okAlert.addAction(UIAlertAction(title: "Ok", style: .default))
                 self.present(okAlert, animated: true)
+                
             }
             
             alertController.addAction(flagAction)
@@ -144,10 +141,10 @@ extension HomeViewController: UITableViewDataSource {
             poll.votePercent2 = 0
         }
         
-        cell.pollText1Percent.text = String(format: "%.0f", poll.votePercent)
-        cell.pollText2Percent.text = String(format: "%.0f", poll.votePercent2)
+        cell.pollText1Percent.text = "\(String(format: "%.0f", poll.votePercent))%"
+        cell.pollText2Percent.text = "\(String(format: "%.0f", poll.votePercent2))%"
         
-//        cell.pollUsername.text = String(poll.poster!)
+        
         
         return cell
     }
@@ -168,7 +165,7 @@ extension HomeViewController: YourPollsCellDelegate {
             if poll.isVoted[User.current] == true {
                 poll.voteCount -= 1
                 poll.isVoted[User.current] = false
-//                pollTextButton.backgroundColor = nil
+
                 
                 
             }
@@ -176,14 +173,14 @@ extension HomeViewController: YourPollsCellDelegate {
             else {
                 poll.voteCount += 1
                 poll.isVoted[User.current] = true
-//                pollTextButton.backgroundColor = UIColor(red: 232/255, green: 75/255, blue: 97/255, alpha: 0.175)
+
             
                 
                 
                 if poll.isVoted2[User.current] == true {
                     poll.voteCount2 -= 1
                     poll.isVoted2[User.current] = false
-//                    pollTextButton.backgroundColor = nil
+
                     
                     
                 }
@@ -199,19 +196,19 @@ extension HomeViewController: YourPollsCellDelegate {
             if poll.isVoted2[User.current] == true {
                 poll.voteCount2 -= 1
                 poll.isVoted2[User.current] = false
-//                pollTextButton.backgroundColor = nil
+
                 
             }
             
             else {
                 poll.voteCount2 += 1
                 poll.isVoted2[User.current] = true
-//                pollTextButton.backgroundColor = UIColor(red: 232/255, green: 75/255, blue: 97/255, alpha: 0.175)
+
                 
                 if poll.isVoted[User.current] == true {
                     poll.voteCount -= 1
                     poll.isVoted[User.current] = false
-//                    pollTextButton.backgroundColor = nil
+
                 }
             }
             

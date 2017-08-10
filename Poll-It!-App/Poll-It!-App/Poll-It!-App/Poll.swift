@@ -71,15 +71,7 @@ class Poll: NSObject {
         
     }
     
-    
-//    var dictValue: [String: Any] {
-//        let userDict = ["uid": poster.uid,
-//                            "username": poster.username]
-//        
-//        return ["vote_count": voteCount,
-//                 "vote_count2": voteCount2]
-//    }
-   
+
     
     
     

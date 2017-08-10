@@ -57,31 +57,11 @@ class ProfileViewController: UIViewController {
         userDefault.set(false, forKey: "loggedIn")
         userDefault.synchronize()
  }
-    
-    @IBAction func creditsButtonTapped(_ sender: UIBarButtonItem) {
-        let vc = storyboard?.instantiateViewController(withIdentifier: "credits") as! CreditsViewController
-        
-        self.present(vc, animated: true, completion: nil)
-        
+
+
     }
     
-//    override func didReceiveMemoryWarning() {
-//        super.didReceiveMemoryWarning()
-//        // Dispose of any resources that can be recreated.
-//    }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-                                        
-}
 
 extension ProfileViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -127,8 +107,8 @@ extension ProfileViewController: UITableViewDataSource {
             poll.votePercent2 = 0
         }
         
-        cell.profilePollText1Per.text = String(format: "%.0f", poll.votePercent)
-        cell.profilePollText2Per.text = String(format: "%.0f", poll.votePercent2)
+        cell.profilePollText1Per.text = "\(String(format: "%.0f", poll.votePercent))%"
+        cell.profilePollText2Per.text = "\(String(format: "%.0f", poll.votePercent2))%"
         return cell
     }
     
@@ -187,8 +167,7 @@ extension ProfileViewController: ProfilePollsCellDelegate {
             
         }
         
-//        VoteService.voting(for: User.current, poll: poll)
-//        tableView.reloadData()
+
     }
     
 }

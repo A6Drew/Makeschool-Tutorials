@@ -47,9 +47,10 @@ class AddPollViewController: UIViewController, UITextViewDelegate {
         pollTextView2.layer.borderWidth = 2
         pollTextView2.layer.cornerRadius = 7.5
         
-        cancelButton.layer.cornerRadius = 20
-        doneButton.layer.cornerRadius = 20
+        cancelButton.layer.cornerRadius = 15
+        doneButton.layer.cornerRadius = 15
         pollTitleView.layer.cornerRadius = 7.5
+        
 
         // Do any additional setup after loading the view.
     }
@@ -95,7 +96,7 @@ class AddPollViewController: UIViewController, UITextViewDelegate {
         
         
         
-        if pollTextView1.text.characters.count >= 116
+        if pollTextView1.text.characters.count >= 76
         {
             pollTextView1.endEditing(true)
             pollTextView1.deleteBackward()
@@ -104,7 +105,7 @@ class AddPollViewController: UIViewController, UITextViewDelegate {
 
         }
         
-        if pollTextView2.text.characters.count >= 116
+        if pollTextView2.text.characters.count >= 76
         {
             pollTextView2.endEditing(true)
             pollTextView2.deleteBackward()
@@ -112,7 +113,7 @@ class AddPollViewController: UIViewController, UITextViewDelegate {
             
 
         }
-        if pollTitleView.text.characters.count >= 75
+        if pollTitleView.text.characters.count >= 61
         
         {
             pollTitleView.endEditing(true)
@@ -147,6 +148,7 @@ class AddPollViewController: UIViewController, UITextViewDelegate {
         }
         
         
+        
         let ref = Database.database().reference().child("users").child(User.current.uid).child("polls").childByAutoId()
         let pollKey = ref.key
         
@@ -179,35 +181,4 @@ class AddPollViewController: UIViewController, UITextViewDelegate {
         view.endEditing(true)
     }
     
-//    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool
-//    {
-//        if(text == "\n")
-//        {
-//            view.endEditing(true)
-//            return false
-//        }
-//        else
-//        {
-//            return true
-//        }
-//    }
 }
-    
-    
-//    override func didReceiveMemoryWarning() {
-//        super.didReceiveMemoryWarning()
-//        // Dispose of any resources that can be recreated.
-//    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-

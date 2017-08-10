@@ -41,7 +41,7 @@ class ProfilePollsCell: UITableViewCell {
 
         // Configure the view for the selected state
         
-        let percentColor = UIColor(red: 115/255, green: 21/255, blue: 54/255, alpha: 1.0).cgColor
+        let percentColor = UIColor(red: 232/255, green: 75/255, blue: 97/255, alpha: 1.0).cgColor
         profilePollText1Per.layer.borderColor = percentColor
         profilePollText1Per.layer.borderWidth = 2
         profilePollText2Per.layer.borderColor = percentColor

@@ -24,6 +24,12 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        registerButton.layer.borderColor = UIColor(red: 232/255, green: 75/255, blue: 97/255, alpha: 1.0).cgColor
+        registerButton.layer.borderWidth = 2
+        loginButton.layer.borderColor = UIColor(red: 232/255, green: 75/255, blue: 97/255, alpha: 1.0).cgColor
+        loginButton.layer.borderWidth = 2
+        
+        
         // Do any additional setup after loading the view.
     }
     
