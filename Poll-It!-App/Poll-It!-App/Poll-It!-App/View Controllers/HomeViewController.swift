@@ -17,7 +17,7 @@ class HomeViewController: UIViewController {
      var polls = [Poll]()
 
     
-    
+
    
 
     @IBOutlet weak var tableView: UITableView!
@@ -168,16 +168,24 @@ extension HomeViewController: YourPollsCellDelegate {
             if poll.isVoted[User.current] == true {
                 poll.voteCount -= 1
                 poll.isVoted[User.current] = false
+//                pollTextButton.backgroundColor = nil
+                
                 
             }
             
             else {
                 poll.voteCount += 1
                 poll.isVoted[User.current] = true
+//                pollTextButton.backgroundColor = UIColor(red: 232/255, green: 75/255, blue: 97/255, alpha: 0.175)
+            
+                
                 
                 if poll.isVoted2[User.current] == true {
                     poll.voteCount2 -= 1
                     poll.isVoted2[User.current] = false
+//                    pollTextButton.backgroundColor = nil
+                    
+                    
                 }
             }
 
@@ -191,15 +199,19 @@ extension HomeViewController: YourPollsCellDelegate {
             if poll.isVoted2[User.current] == true {
                 poll.voteCount2 -= 1
                 poll.isVoted2[User.current] = false
+//                pollTextButton.backgroundColor = nil
+                
             }
             
             else {
                 poll.voteCount2 += 1
                 poll.isVoted2[User.current] = true
+//                pollTextButton.backgroundColor = UIColor(red: 232/255, green: 75/255, blue: 97/255, alpha: 0.175)
                 
                 if poll.isVoted[User.current] == true {
                     poll.voteCount -= 1
                     poll.isVoted[User.current] = false
+//                    pollTextButton.backgroundColor = nil
                 }
             }
             
@@ -208,6 +220,8 @@ extension HomeViewController: YourPollsCellDelegate {
         VoteService.voting(for: User.current, poll: poll)
         tableView.reloadData()
     }
+    
+    
 
 }
 

@@ -21,6 +21,13 @@ class CreditsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func icons8ButtonTapped(_ sender: UIButton) {
+//        if let url = NSURL(string: "https://icons8.com/") {
+//            UIApplication.sharedApplication().openURL(url)
+        
+        UIApplication.shared.openURL(NSURL(string: "https://icons8.com")! as URL)
+//        }
+    }
 
     /*
     // MARK: - Navigation

@@ -68,19 +68,19 @@ class AddPollViewController: UIViewController, UITextViewDelegate {
 
 
     
-//    func textViewShouldReturn(_ textView: UITextView) -> Bool {
-//        self.view.endEditing(true)
-//        return false
-//    }
+    func textViewShouldReturn(_ textView: UITextView) -> Bool {
+        self.view.endEditing(true)
+        return false
+    }
 
-//    func textView(pollTextView1: UITextView, pollTextView2: UITextView, shouldChangeTextInRange range: NSRange, replacementText text: String) -> Bool {
-//        if(text == "\n") {
-//            pollTextView1.resignFirstResponder()
-//            pollTextView2.resignFirstResponder()
-//            return false
-//        }
-//        return true
-//    }
+    func textView(pollTextView1: UITextView, pollTextView2: UITextView, shouldChangeTextInRange range: NSRange, replacementText text: String) -> Bool {
+        if(text == "\n") {
+            pollTextView1.resignFirstResponder()
+            pollTextView2.resignFirstResponder()
+            return false
+        }
+        return true
+    }
     
 
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
@@ -95,7 +95,7 @@ class AddPollViewController: UIViewController, UITextViewDelegate {
         
         
         
-        if pollTextView1.text.characters.count >= 141
+        if pollTextView1.text.characters.count >= 116
         {
             pollTextView1.endEditing(true)
             pollTextView1.deleteBackward()
@@ -104,7 +104,7 @@ class AddPollViewController: UIViewController, UITextViewDelegate {
 
         }
         
-        if pollTextView2.text.characters.count >= 141
+        if pollTextView2.text.characters.count >= 116
         {
             pollTextView2.endEditing(true)
             pollTextView2.deleteBackward()

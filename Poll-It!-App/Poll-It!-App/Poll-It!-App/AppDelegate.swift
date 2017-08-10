@@ -19,6 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
         
        configureInitialRootViewController(for: window)
+        
+        UIApplication.shared.statusBarStyle = .lightContent
 
         
         // 1

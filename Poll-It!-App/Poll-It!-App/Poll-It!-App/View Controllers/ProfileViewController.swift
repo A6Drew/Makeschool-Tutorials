@@ -15,6 +15,7 @@ class ProfileViewController: UIViewController {
 
     var polls = [Poll]()
 
+
     @IBOutlet weak var tableView: UITableView!
 
     @IBOutlet weak var signOutButton: UIButton!
@@ -55,7 +56,14 @@ class ProfileViewController: UIViewController {
         let userDefault = UserDefaults.standard
         userDefault.set(false, forKey: "loggedIn")
         userDefault.synchronize()
- }   
+ }
+    
+    @IBAction func creditsButtonTapped(_ sender: UIBarButtonItem) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "credits") as! CreditsViewController
+        
+        self.present(vc, animated: true, completion: nil)
+        
+    }
     
 //    override func didReceiveMemoryWarning() {
 //        super.didReceiveMemoryWarning()

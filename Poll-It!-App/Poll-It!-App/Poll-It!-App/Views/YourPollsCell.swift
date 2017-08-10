@@ -27,6 +27,7 @@ class YourPollsCell: UITableViewCell, UITextFieldDelegate {
     @IBOutlet weak var pollText2View: UITextView!
     @IBOutlet weak var pollText1Button: UIButton!
     @IBOutlet weak var pollText2Button: UIButton!
+
     @IBOutlet weak var pollText1Percent: UILabel!
     @IBOutlet weak var pollText2Percent: UILabel!
     
@@ -35,6 +36,7 @@ class YourPollsCell: UITableViewCell, UITextFieldDelegate {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        hidePercent()
     }
     
     
@@ -42,6 +44,7 @@ class YourPollsCell: UITableViewCell, UITextFieldDelegate {
     var didTapOptionsButtonForCell: ((YourPollsCell) -> Void)?
     
 
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
@@ -86,7 +89,14 @@ class YourPollsCell: UITableViewCell, UITextFieldDelegate {
 //        pollText2View.layer.borderColor = color2
 //        pollText2View.layer.borderWidth = 2
 
+//pollText1Percent.isHidden = true
+//pollText2Percent.isHidden = true
+       
+    }
 
+    func hidePercent() {
+        pollText1Percent.isHidden = true
+        pollText2Percent.isHidden = true
     }
     
     @IBAction func reportButtonTapped(_ sender: UIButton) {
@@ -97,21 +107,34 @@ class YourPollsCell: UITableViewCell, UITextFieldDelegate {
     @IBAction func pollText1ButtonTapped(_ sender: UIButton) {
         
         delegate?.didTapVoteButton(sender, pollNum: 1, on: self)
-//        pollText1View.backgroundColor = UIColor(red: 64/255, green: 64/255, blue: 64/255, alpha: 1)
+//        pollText1Percent.isHidden = !pollText1Percent.isHidden
+//        pollText2Percent.isHidden = !pollText2Percent.isHidden
+        pollText1Percent.isHidden = false
+        pollText2Percent.isHidden = false
+      
+
+//        pollText1View.backgroundColor = UIColor(red: 232/255, green: 75/255, blue: 97/255, alpha: 1)
 //        pollText1Button.backgroundColor = UIColor(red: 127/255, green: 41/255, blue: 53/255, alpha: 1)
         //pollText1Button.isEnabled = false
+        
         
     }
     
     @IBAction func pollText2ButtonTapped(_ sender: UIButton) {
         
         delegate?.didTapVoteButton(sender, pollNum: 2, on: self)
-//        pollText2View.backgroundColor = UIColor(red: 64/255, green: 64/255, blue: 64/255, alpha: 1)
+//        pollText1Percent.isHidden = !pollText1Percent.isHidden
+//        pollText2Percent.isHidden = !pollText2Percent.isHidden
+//        pollText2View.backgroundColor = UIColor(red: 232/255, green: 75/255, blue: 97/255, alpha: 1)
 //        pollText2Button.backgroundColor = UIColor(red: 127/255, green: 41/255, blue: 53/255, alpha: 1)
         //pollText2Button.isEnabled = false
+        
+        pollText1Percent.isHidden = false
+        pollText2Percent.isHidden = false
+
     }
     
-
+ 
     
     
 }

@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import Foundation
 import FirebaseDatabase.FIRDataSnapshot
 
 class User: NSObject {
@@ -63,9 +62,10 @@ class User: NSObject {
         // 3
         guard let currentUser = _current else {
             fatalError("Error: current user doesn't exist")
+  
             
         }
-        
+    
         // 4
         return currentUser
         

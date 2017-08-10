@@ -38,7 +38,7 @@ class CreateUsernameViewController: UIViewController, UITextFieldDelegate {
             !username.isEmpty else { return }
         
 
-        let alertController = UIAlertController(title: "Error", message: "Your have reached the character limit", preferredStyle: UIAlertControllerStyle.alert)
+        let alertController = UIAlertController(title: "Error", message: "This username is already taken", preferredStyle: UIAlertControllerStyle.alert)
         
         let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default)
         {
@@ -56,7 +56,7 @@ class CreateUsernameViewController: UIViewController, UITextFieldDelegate {
         checkRef.observeSingleEvent(of: .value, with: { (snapshot) in
             let snap = snapshot.value as? [String: Any]
             
-            for value in (snap?.values)! {
+            for value in (snap?.values)!{
                 let userDictionary = value as? [String: String]
                 if let username = userDictionary?["username"] {
                     if username == self.usernameTextField.text {
