@@ -55,7 +55,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Poll It!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2UX-2Z-hZS">
-                                <rect key="frame" x="20" y="162" width="335" height="96"/>
+                                <rect key="frame" x="72" y="120" width="231" height="96"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="80"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -63,17 +63,17 @@
                         </subviews>
                         <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="7I4-lY-0OU" firstAttribute="top" secondItem="3N9-Rb-Q9x" secondAttribute="bottom" constant="15" id="1ce-Sa-VYS"/>
-                            <constraint firstItem="2UX-2Z-hZS" firstAttribute="leading" secondItem="YZt-40-tZa" secondAttribute="leading" constant="20" id="5H8-rI-7et"/>
+                            <constraint firstItem="7I4-lY-0OU" firstAttribute="top" secondItem="3N9-Rb-Q9x" secondAttribute="bottom" constant="15" id="3fa-Dk-UuD"/>
                             <constraint firstItem="7I4-lY-0OU" firstAttribute="centerX" secondItem="YZt-40-tZa" secondAttribute="centerX" id="8qa-G3-6bd"/>
-                            <constraint firstItem="3N9-Rb-Q9x" firstAttribute="top" secondItem="2UX-2Z-hZS" secondAttribute="bottom" constant="150" id="A3g-hf-4HB"/>
+                            <constraint firstItem="WfJ-4i-QzE" firstAttribute="top" secondItem="7I4-lY-0OU" secondAttribute="bottom" constant="15" id="Cs5-DQ-LYy"/>
                             <constraint firstAttribute="trailing" secondItem="WfJ-4i-QzE" secondAttribute="trailing" constant="60" id="HNU-fm-O74"/>
+                            <constraint firstItem="2UX-2Z-hZS" firstAttribute="centerX" secondItem="YZt-40-tZa" secondAttribute="centerX" id="RBO-fi-8wN"/>
                             <constraint firstItem="WfJ-4i-QzE" firstAttribute="leading" secondItem="YZt-40-tZa" secondAttribute="leading" constant="60" id="VHc-nt-ss9"/>
                             <constraint firstItem="nFw-49-bo6" firstAttribute="top" secondItem="WfJ-4i-QzE" secondAttribute="bottom" constant="95" id="a1D-L9-S7L"/>
+                            <constraint firstItem="2UX-2Z-hZS" firstAttribute="top" secondItem="E5J-2M-9ql" secondAttribute="bottom" constant="100" id="fiI-sa-Nyn"/>
+                            <constraint firstItem="WfJ-4i-QzE" firstAttribute="top" secondItem="3N9-Rb-Q9x" secondAttribute="bottom" constant="54" id="gKl-AZ-umb"/>
                             <constraint firstAttribute="trailing" secondItem="3N9-Rb-Q9x" secondAttribute="trailing" constant="60" id="htE-Wc-WTg"/>
                             <constraint firstItem="3N9-Rb-Q9x" firstAttribute="leading" secondItem="YZt-40-tZa" secondAttribute="leading" constant="60" id="jXz-tD-XbN"/>
-                            <constraint firstItem="WfJ-4i-QzE" firstAttribute="top" secondItem="7I4-lY-0OU" secondAttribute="bottom" constant="15" id="ntG-t5-LJz"/>
-                            <constraint firstAttribute="trailing" secondItem="2UX-2Z-hZS" secondAttribute="trailing" constant="20" id="rtN-G0-CGj"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="QIy-2k-VVK"/>

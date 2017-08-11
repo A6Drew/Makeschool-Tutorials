@@ -21,25 +21,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" indicatorStyle="black" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="J8O-43-NdR">
-                                <rect key="frame" x="12" y="245" width="171.5" height="258"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" indicatorStyle="black" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="J8O-43-NdR">
+                                <rect key="frame" x="12" y="230" width="171.5" height="273"/>
                                 <color key="backgroundColor" red="0.8862745098" green="0.90980392160000001" blue="0.89411764709999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="25"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="prk-96-WWh">
-                                <rect key="frame" x="191" y="245" width="171.5" height="258"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="prk-96-WWh">
+                                <rect key="frame" x="191" y="230" width="171.5" height="273"/>
                                 <color key="backgroundColor" red="0.8862745098" green="0.90980392160000001" blue="0.89411764709999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="25"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="lqR-it-aCT">
-                                <rect key="frame" x="12" y="170" width="351" height="50"/>
+                                <rect key="frame" x="12" y="155" width="351" height="50"/>
                                 <color key="backgroundColor" red="0.8862745098" green="0.90980392160000001" blue="0.89411764709999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="ZCv-x2-cun"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="25"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3jt-xX-RQs">
@@ -94,7 +94,7 @@
                             <constraint firstItem="J8O-43-NdR" firstAttribute="top" secondItem="lqR-it-aCT" secondAttribute="bottom" constant="25" id="Hox-Qe-9tl"/>
                             <constraint firstItem="prk-96-WWh" firstAttribute="height" secondItem="J8O-43-NdR" secondAttribute="height" id="TTT-Cj-22a"/>
                             <constraint firstItem="th1-uf-amj" firstAttribute="leading" secondItem="mNM-nJ-uba" secondAttribute="leading" constant="15" id="UhG-Xp-sHi"/>
-                            <constraint firstItem="lqR-it-aCT" firstAttribute="top" secondItem="PyH-5G-lUX" secondAttribute="bottom" constant="50" id="Vkx-YN-GOb"/>
+                            <constraint firstItem="lqR-it-aCT" firstAttribute="top" secondItem="PyH-5G-lUX" secondAttribute="bottom" constant="35" id="Vkx-YN-GOb"/>
                             <constraint firstItem="lqR-it-aCT" firstAttribute="leading" secondItem="mNM-nJ-uba" secondAttribute="leading" constant="12" id="Y9A-28-QnB"/>
                             <constraint firstItem="9V3-MJ-HBj" firstAttribute="top" secondItem="3jt-xX-RQs" secondAttribute="bottom" constant="30" id="bPO-sS-KUK"/>
                             <constraint firstItem="J8O-43-NdR" firstAttribute="leading" secondItem="mNM-nJ-uba" secondAttribute="leading" constant="12" id="cGf-Gz-cE1"/>
@@ -192,7 +192,7 @@
                                                         <constraint firstAttribute="height" constant="38" id="Qpn-Cf-0Xn"/>
                                                         <constraint firstAttribute="width" constant="100" id="dwB-gf-GY6"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="36"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                                     <color key="textColor" red="0.90980392160000001" green="0.29411764709999999" blue="0.3803921569" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -341,7 +341,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="377" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vBM-qw-qkB">
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="YourPollsCell" id="zzx-Is-0S1" customClass="YourPollsCell" customModule="Poll_It__App" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="377"/>
@@ -430,6 +430,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="NHg-po-Xvj" secondAttribute="bottom" constant="20" id="0CO-Av-jXC"/>
                                                 <constraint firstAttribute="bottom" secondItem="a1J-95-zLc" secondAttribute="bottom" constant="20" id="1io-87-Rbf"/>

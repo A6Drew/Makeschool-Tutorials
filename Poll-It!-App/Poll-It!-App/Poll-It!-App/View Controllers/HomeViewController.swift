@@ -160,6 +160,9 @@ extension HomeViewController: YourPollsCellDelegate {
 
         let poll = polls[indexPath.row]
         
+
+        
+        
         if pollNum == 1 {
             
             if poll.isVoted[User.current] == true {
@@ -214,9 +217,13 @@ extension HomeViewController: YourPollsCellDelegate {
             
         }
         
+        
+        
         VoteService.voting(for: User.current, poll: poll)
         tableView.reloadData()
     }
+    
+    
     
     
 

@@ -21,7 +21,6 @@ class YourPollsCell: UITableViewCell, UITextFieldDelegate {
     weak var delegate: YourPollsCellDelegate?
 
     
-    
 
 
     @IBOutlet weak var pollTitle: UITextView!
@@ -38,7 +37,6 @@ class YourPollsCell: UITableViewCell, UITextFieldDelegate {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        
         
         // Update 1.1
 //        hidePercent()
